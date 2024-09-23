@@ -1,6 +1,5 @@
 import os
 import sys
-import subprocess
 import readline
 from datetime import datetime
 from termipy.utils import *
@@ -22,26 +21,26 @@ def handle_input(command):
                 return False
             case "echo":
                 sys.stdout.write(f"{' '.join(args)}\n")
-            case "pwd":
+            case "getwd":
                 sys.stdout.write(f"{os.getcwd()}\n")
-            case "cd":
+            case "setwd":
                 handle_cd(args, command)
-            case "type":
+            case "typeof":
                 handle_type(args, command)
-            case "clear":
-                os.system("clear")
+            case "clr" | "cls" | "clear":
+                os.system('cls' if os.name == 'nt' else 'clear')
             case "tree":
                 handle_tree(args, command)
-            case "mkdir":
+            case "makedir":
                 handle_mkdir(args, command)
             case "ff":
                 if args:
                     find_file(args[0])
                 else:
                     sys.stdout.write("Error: No filename specified for find_file command.\n")
-            case "setPyenv":
+            case "setpyenv":
                 handle_setpyenv(args, command)
-            case "setRenv":
+            case "setrenv":
                 handle_setrenv(args, command)
             case "help":
                 sys.stdout.write(help_message)
@@ -52,15 +51,22 @@ def handle_input(command):
                     sys.stdout.write("Error: No file specified for about command.\n")
             case "commands":
                 list_builtins_and_executables()
+            case "delete":
+                handle_delete(args, command)
+            case "search":
+                handle_search(args, command)
+            case "create":
+                handle_create(args, command)
+            case "view":
+                handle_view(args, command)
+            case "rename":
+                handle_rename(args, command)
+            case "diskusage":
+                display_disk_usage(args)
+            case "permissions":
+                check_permissions(args)
             case _:
-                try:
-                    result = subprocess.run([cmd] + args, capture_output=True, text=True)
-                    sys.stdout.write(result.stdout)
-                    sys.stderr.write(result.stderr)
-                except FileNotFoundError:
-                    sys.stdout.write(f"{cmd}: command not found\n")
-                except Exception as e:
-                    sys.stdout.write(f"Error executing {cmd}: {str(e)}\n")
+                sys.stdout.write(f"{cmd}: command not found\n")
     except Exception as e:
         sys.stdout.write(f"Error processing command: {str(e)}\n")
     return True

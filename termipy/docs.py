@@ -1,11 +1,12 @@
 ### Welcome message
 welcome_message = """        
-███████╗██╗  ██╗███████╗██╗     ██╗     ███████╗
-██╔════╝██║  ██║██╔════╝██║     ██║     ╚══███╔╝
-███████╗███████║█████╗  ██║     ██║       ███╔╝ 
-╚════██║██╔══██║██╔══╝  ██║     ██║      ███╔╝  
-███████║██║  ██║███████╗███████╗███████╗███████╗
-╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
+████████╗███████╗██████╗ ███╗   ███╗██╗██████╗ ██╗   ██╗
+╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║██╔══██╗╚██╗ ██╔╝
+   ██║   █████╗  ██████╔╝██╔████╔██║██║██████╔╝ ╚████╔╝ 
+   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██╔═══╝   ╚██╔╝  
+   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║        ██║   
+   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝        ╚═╝   
+                                                        
 Welcome to termipy!
 
 Author: Pratik Kumar
@@ -67,11 +68,11 @@ termipy Command Reference
     $ ls
     Output: Displays the names of the files and directories in the current working directory.
 
-9. setenv --python <version> --req <file> --name <project> : Sets up a new Python environment with a specified Python version, installs dependencies, and creates a project directory.
+9. setPyenv --python <version> --req <file> --name <project> : Sets up a new Python environment with a specified Python version, installs dependencies, and creates a project directory.
     Usage:
-    $ setenv --python <version> --req <requirements.txt> --name <project-name>
+    $ setPyenv --python <version> --req <requirements.txt> --name <project-name>
     Example:
-    $ setenv --python 3.10 --req requirements.txt --name my-flask-app
+    $ setPyenv --python 3.10 --req requirements.txt --name my-flask-app
     This will:
     - Create a project directory named `my-flask-app`.
     - Set up a virtual environment using Python version 3.10 inside the project directory.

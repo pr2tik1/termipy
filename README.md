@@ -23,14 +23,12 @@ termipy is a simple command-line shell that provides basic shell functionalities
    ```
    
 ## Author
-
-Pratik Kumar  
-Email: pr2tik1@gmail.com
+- Name : Pratik Kumar  
+- Email: pr2tik1@gmail.com
 
 ## Version
-
-0.1
-Date: 2024-09-22
+- Version : 0.1
+- Date: 2024-09-22
 
 
 ## Features

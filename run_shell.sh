@@ -9,4 +9,4 @@ fi
 . venv/bin/activate
 
 # Run your Python application
-python3 -m app.main "$@"
+python3 -m termipy.main "$@"

@@ -1,6 +1,6 @@
-# Shellz
+# TermiPy
 
-Shellz is a simple command-line shell that provides basic shell functionalities, including navigation, file listing, and command execution.
+termipy is a simple command-line shell that provides basic shell functionalities, including navigation, file listing, and command execution.
 
 ## Features
 
@@ -50,3 +50,12 @@ Email: pr2tik1@gmail.com
 
 1.0  
 Date: 2024-09-22
+
+
+## To add
+
+- [ ] History 
+- [ ] Moving file to another directory
+- [ ] Copying file to another directory
+- [ ] File details 
+- [ ] 

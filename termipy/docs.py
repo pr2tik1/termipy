@@ -89,4 +89,9 @@ termipy Command Reference
     $ help
     Output: Displays the command reference with usage examples.
 
+11. commmands                  : Lists all built-in commands and executable commands available in the system, limited to 10 displayed executables.
+    Usage:
+    $ commands
+    Output: Displays a list of built-in commands followed by up to 10 executable commands. If there are more than 10, it will indicate how many more are available.
+
 """

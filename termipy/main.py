@@ -18,14 +18,12 @@ def handle_input(command):
     cmd, *args = parts
     try:
         match cmd:
-            case "exit" | "exit 0":
+            case "exit":
                 return False
             case "echo":
                 sys.stdout.write(f"{' '.join(args)}\n")
-                sys.stdout.flush()
             case "pwd":
                 sys.stdout.write(f"{os.getcwd()}\n")
-                sys.stdout.flush()
             case "cd":
                 handle_cd(args, command)
             case "type":
@@ -37,53 +35,43 @@ def handle_input(command):
             case "mkdir":
                 handle_mkdir(args, command)
             case "ff":
-                find_file(args[0])
+                if args:
+                    find_file(args[0])
+                else:
+                    sys.stdout.write("Error: No filename specified for find_file command.\n")
             case "setPyenv":
                 handle_setpyenv(args, command)
             case "setRenv":
                 handle_setrenv(args, command)
             case "help":
-                print("DOCUMENTATION\n")
+                sys.stdout.write(help_message)
             case "about":
                 if args:
                     get_file_details(args[0])
                 else:
                     sys.stdout.write("Error: No file specified for about command.\n")
-                    sys.stdout.flush()
+            case "commands":
+                list_builtins_and_executables()
             case _:
                 try:
                     result = subprocess.run([cmd] + args, capture_output=True, text=True)
                     sys.stdout.write(result.stdout)
-                    sys.stdout.flush()
                     sys.stderr.write(result.stderr)
-                    sys.stdout.flush()
                 except FileNotFoundError:
                     sys.stdout.write(f"{cmd}: command not found\n")
-                    sys.stdout.flush()
                 except Exception as e:
                     sys.stdout.write(f"Error executing {cmd}: {str(e)}\n")
-                    sys.stdout.flush()
     except Exception as e:
         sys.stdout.write(f"Error processing command: {str(e)}\n")
-        sys.stdout.flush()
     return True
-
-def input_with_prompt():
-    prompt = "@termipy >> "
-    sys.stdout.write(prompt)
-    sys.stdout.flush()
-    user_input = input()  
-    return user_input
 
 def main():
     sys.stdout.write(welcome_message)
     sys.stdout.flush()
+    prompt = "@termipy >> "
+    
     while True:
-        command = input_with_prompt()
-        if command == "help":
-            sys.stdout.write(help_message)
-            sys.stdout.flush()
-
+        command = input(prompt)
         if not handle_input(command):
             break
 

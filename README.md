@@ -2,45 +2,26 @@
 
 termipy is a simple command-line shell that provides basic shell functionalities, including navigation, file listing, and command execution.
 
-## Features
+## Installation and Usage
 
-- **Echo**: Print messages to the console.
-- **Exit**: Exit the shell.
-- **Change Directory (cd)**: Change the current working directory.
-- **Print Working Directory (pwd)**: Display the current directory.
-- **Clear**: Clear the console screen.
-- **Type**: Check if a command is a shell builtin or find its path.
-- **Tree**: Display the directory structure up to a specified level.
-- **Help**: Display the help documentation.
+1. Clone the repository or download the script and then install using,
 
-## Installation
+   ```bash
+   pip install .
+   ```
 
-1. Clone the repository or download the script.
 2. Run the script using Python 3:
 
    ```bash
-   ./run_shell.sh
+   termipy
    ```
 
    or 
 
    ```bash
-   PATH="/usr/bin:/usr/local/bin" ./run_shell.sh 
+   PATH="/usr/bin:/usr/local/bin" termipy
    ```
    
-## Usage
-
-Once the shell is running, you can use the following commands:
-
-- `echo <message>`: Prints the message to the console.
-- `exit`: Exits the shell.
-- `cd <directory>`: Changes the current directory.
-- `pwd`: Prints the current working directory.
-- `clear`: Clears the console screen.
-- `type <command>`: Displays how a command would be interpreted.
-- `tree <level>`: Displays the directory structure up to a specified level.
-- `help`: Display this documentation.
-
 ## Author
 
 Pratik Kumar  
@@ -48,14 +29,22 @@ Email: pr2tik1@gmail.com
 
 ## Version
 
-1.0  
+0.1
 Date: 2024-09-22
 
 
-## To add
+## Features
 
-- [ ] History 
+- [x] Print messages to the console.
+- [x] Exit the shell.
+- [x] Change the current working directory.
+- [x] Display the current directory.
+- [x] Clear the console screen.
+- [x] Check if a command is a shell builtin or find its path.
+- [x] Display the directory structure up to a specified level.
+- [x] List all built-in commands and executable commands available in the system, limited to 10 displayed executables.
+- [x] Display the help documentation.
+- [x] File details 
+- [ ] Command History 
 - [ ] Moving file to another directory
 - [ ] Copying file to another directory
-- [ ] File details 
-- [ ] 

@@ -2,8 +2,9 @@ import os
 import sys
 import readline
 from termipy.utils import *
-from termipy.env_setup import handle_setpyenv, handle_setrenv
-from termipy.docs import welcome_message, help_message
+from termipy.file_management import *
+from termipy.env_setup import *
+from termipy.docs import *
 
 readline.set_completer(completer)
 readline.parse_and_bind("tab: complete")
@@ -29,13 +30,13 @@ def handle_input(command):
             os.system('cls' if os.name == 'nt' else 'clear')
         elif cmd == "tree":
             handle_tree(args, command)
-        elif cmd == "makedir":
-            handle_mkdir(args, command)
-        elif cmd == "ff":
+        elif cmd == "create":
+            handle_create(args, command)
+        elif cmd == "search":
             if args:
-                find_file(args[0])
+                search(args[0])
             else:
-                sys.stdout.write("Error: No filename specified for find_file command.\n")
+                sys.stdout.write("Error: No filename specified for `search <file_name_here>` command.\n")
         elif cmd == "setpyenv":
             handle_setpyenv(args, command)
         elif cmd == "setrenv":
@@ -51,12 +52,6 @@ def handle_input(command):
             list_builtins_and_executables()
         elif cmd == "delete":
             handle_delete(args, command)
-        elif cmd == "search":
-            handle_search(args, command)
-        elif cmd == "create":
-            handle_create(args, command)
-        elif cmd == "view":
-            handle_view(args, command)
         elif cmd == "rename":
             handle_rename(args, command)
         elif cmd == "diskusage":

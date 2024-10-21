@@ -9,7 +9,7 @@ import time
 from typing import List
 from termipy.base_command import Command
 
-class ResourceUsageCommandColumnWise(Command):
+class ResourceUsageCommand(Command):
     def __init__(self):
         self.max_width = self.calculate_max_width()
 

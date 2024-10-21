@@ -19,6 +19,7 @@ from termipy.environment_commands import SetPyEnvCommand, SetREnvCommand
 from termipy.utility_commands import (
     HelpCommand, AboutCommand, CommandsCommand
 )
+from termipy.resource_commands import ResourceUsageCommand
 from termipy.docs import WELCOME_MESSAGE
 
 class TermiPy:
@@ -45,6 +46,9 @@ class TermiPy:
             "diskusage": DiskUsageCommand(),
             "permissions": PermissionsCommand(),
             "exit": ExitCommand(),
+            "resource": ResourceUsageCommand(),
+            "resources": ResourceUsageCommand(),
+            "stats": ResourceUsageCommand(),
         }
 
     def run(self):

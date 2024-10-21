@@ -1,1 +1,0 @@
-termipy @ file:///workspace/termipy

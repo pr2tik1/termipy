@@ -29,6 +29,7 @@ class HelpCommand(Command):
         rename <old> <new> - Rename file or directory
         diskusage [path]   - Show disk usage
         permissions <file> - Show file permissions
+        resource, resources, stats - Show system resource usage
         exit               - Exit TermiPy
         """
         print(help_text)

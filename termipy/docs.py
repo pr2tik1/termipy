@@ -17,7 +17,7 @@ Contact: pr2tik1@gmail.com
 Supported Commands:
 ───────────────────────────────────────────────────────
 echo <message>        - Prints the message to the terminal
-getwd                 - Displays the current working directory
+getwd, ls             - Displays the current working directory
 setwd <dir>           - Changes the working directory
 typeof <file>         - Shows the type of the file or directory
 clr, cls, clear       - Clears the terminal screen
@@ -32,6 +32,7 @@ delete <file/dir>     - Deletes a file or directory
 rename <file> <new>   - Renames a file or directory
 diskusage             - Shows disk usage information
 permissions <file>    - Displays file permissions
+resource, resources, stats - Shows system resource usage
 exit                  - Exits termipy
 ───────────────────────────────────────────────────────
 

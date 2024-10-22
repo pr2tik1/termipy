@@ -27,8 +27,9 @@ TermiPy is a simple command-line shell providing essential shell functionalities
 1. Clone the repository or download the script and then install using,
 
    ```bash
-   pip install .
+   pip install termipy
    ```
+   - Visit [here](https://pypi.org/project/termipy/) for more info.
 
 2. Run the script using Python 3:
 

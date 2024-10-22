@@ -10,7 +10,7 @@ WELCOME_MESSAGE = """
 Welcome to termipy!
 
 Author: Pratik Kumar
-Version: 0.2.0
+Version: 0.2.1
 Date: 2024-10-12
 Contact: pr2tik1@gmail.com
 

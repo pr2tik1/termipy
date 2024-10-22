@@ -19,8 +19,4 @@ format:
     theme: cosmo
     toc: true
     number-depth: 0
-  pdf:
-    theme: cosmo
-    toc: true
-    documentclass: scrreprt
     

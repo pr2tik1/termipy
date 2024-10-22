@@ -1,0 +1,532 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "TermiPy",
+    "section": "",
+    "text": "Welcome to TermiPy\nTermiPy is a lightweight and extensible command-line shell designed for users who want a simplified, custom terminal interface. It provides core terminal features like directory navigation, file management, and command execution, making it easy to interact with your file system. Built to be minimal and efficient, TermiPy is cross-platform, running on Linux, macOS, and Windows.",
+    "crumbs": [
+      "Welcome to TermiPy"
+    ]
+  },
+  {
+    "objectID": "index.html#features",
+    "href": "index.html#features",
+    "title": "TermiPy",
+    "section": "",
+    "text": "📂 File and Directory Operations: Navigate directories, list files, create, delete, and rename files/directories.\n🖥️ Command Execution: Execute shell commands directly through TermiPy.\n📊 System Resource Monitoring: View real-time CPU, memory, disk, and network usage statistics.\n🐍 Environment Setup: Set up Python and R environments easily.\n🌐 Cross-Platform: Works on Linux, macOS, and Windows.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to TermiPy</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "TermiPy",
+    "section": "0.2 📦 Installation",
+    "text": "0.2 📦 Installation\n\nClone the repository or download the script and then install using,\npip install .\nRun the script using Python 3:\ntermipy\nor\nPATH=\"/usr/bin:/usr/local/bin\" termipy",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to TermiPy</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "TermiPy",
+    "section": "0.3 🚀 Usage",
+    "text": "0.3 🚀 Usage\nRun TermiPy using the following command:\ntermipy\nIf you encounter any PATH issues, you can use:\nPATH=\"/usr/bin:/usr/local/bin\" termipy",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to TermiPy</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#available-commands",
+    "href": "index.html#available-commands",
+    "title": "TermiPy",
+    "section": "0.4 📚 Available Commands",
+    "text": "0.4 📚 Available Commands\n\n\n\nCommand\nDescription\n\n\n\n\necho &lt;message&gt;\nPrint a message to the terminal\n\n\ngetwd, ls\nGet current working directory\n\n\nsetwd &lt;directory&gt;\nChange directory\n\n\ntypeof &lt;command&gt;\nShow command type\n\n\nclear (aliases: cls, clr)\nClear the screen\n\n\ntree [directory]\nShow directory structure\n\n\ncreate &lt;path&gt;\nCreate file or directory\n\n\nsearch &lt;filename&gt;\nSearch for a file\n\n\nsetpyenv [name] [version]\nCreate Python virtual environment\n\n\nsetrenv [name]\nInitialize R environment\n\n\nabout &lt;file&gt;\nShow file details\n\n\ncommands\nList all available commands\n\n\ndelete &lt;path&gt;\nDelete file or directory\n\n\nrename &lt;old&gt; &lt;new&gt;\nRename file or directory\n\n\ndiskusage [path]\nShow disk usage\n\n\npermissions &lt;file&gt;\nShow file permissions\n\n\nresource, resources, stats\nShow system resource usage\n\n\nhelp\nDisplay help information\n\n\nexit\nExit TermiPy\n\n\n\nFor more information on a specific command, use: &lt;command&gt; -h",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to TermiPy</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "TermiPy",
+    "section": "0.5 🤝 Contributing",
+    "text": "0.5 🤝 Contributing\nContributions, issues, and feature requests are welcome! Feel free to check issues page.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to TermiPy</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "TermiPy",
+    "section": "License",
+    "text": "License\nTermiPy is licensed under the MIT License.",
+    "crumbs": [
+      "Welcome to TermiPy"
+    ]
+  },
+  {
+    "objectID": "index.html#author",
+    "href": "index.html#author",
+    "title": "TermiPy",
+    "section": "0.7 👤 Author",
+    "text": "0.7 👤 Author\nPratik Kumar\n\nWebsite: pr2tik1\nTwitter: @pr2tik1\nGithub: @pr2tik1\nLinkedIn: @pratik-kumar",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to TermiPy</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#show-your-support",
+    "href": "index.html#show-your-support",
+    "title": "TermiPy",
+    "section": "0.8 🙏 Show your support",
+    "text": "0.8 🙏 Show your support\nGive a ⭐️ if this project helped you!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to TermiPy</span>"
+    ]
+  },
+  {
+    "objectID": "getting-started.html",
+    "href": "getting-started.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "Installation\nYou can install TermiPy using pip, the Python package installer:\nVisit PyPi for more releases - https://pypi.org/project/termipy/",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#installation",
+    "href": "getting-started.html#installation",
+    "title": "Getting Started",
+    "section": "",
+    "text": "pip install termipy",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#running-termipy",
+    "href": "getting-started.html#running-termipy",
+    "title": "Getting Started",
+    "section": "Running TermiPy",
+    "text": "Running TermiPy\nAfter installation, you can start TermiPy by running:\ntermipy\nIf you encounter any PATH issues, you can use:\nPATH=\"/usr/bin:/usr/local/bin\" termipy",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#available-commands",
+    "href": "getting-started.html#available-commands",
+    "title": "Getting Started",
+    "section": "Available Commands",
+    "text": "Available Commands\nHere is a quick overview of the most commonly used commands in TermiPy:\necho &lt;message&gt;: Prints a message to the terminal.\ngetwd, ls: Displays the current working directory.\nsetwd &lt;directory&gt;: Changes the current directory.\nclear: Clears the terminal screen. Aliases: cls, clr.\ntree [directory]: Displays the directory structure.\ncreate &lt;path&gt;: Creates a new file or directory.\nsearch &lt;filename&gt;: Searches for a specific file by name.\ndiskusage [path]: Shows disk usage of a specified path.\nFor a full list of commands, type:\ncommands",
+    "crumbs": [
+      "Getting Started with TermiPy"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#setting-up-python-and-r-environments",
+    "href": "getting-started.html#setting-up-python-and-r-environments",
+    "title": "Getting Started",
+    "section": "Setting Up Python and R Environments",
+    "text": "Setting Up Python and R Environments\nTermiPy provides an easy way to set up Python and R environments:\nsetpyenv [name] [version]",
+    "crumbs": [
+      "Getting Started with TermiPy"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#to-initialize-an-r-environment-use",
+    "href": "getting-started.html#to-initialize-an-r-environment-use",
+    "title": "Getting Started",
+    "section": "To initialize an R environment, use:",
+    "text": "To initialize an R environment, use:\nsetrenv [name]",
+    "crumbs": [
+      "Getting Started with TermiPy"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#system-resource-monitoring",
+    "href": "getting-started.html#system-resource-monitoring",
+    "title": "Getting Started",
+    "section": "System Resource Monitoring",
+    "text": "System Resource Monitoring\nYou can monitor your system’s resources, such as CPU, memory, and network usage, in real-time using the resource or resources command:\nresource\nor\nstats\nThis will display an overview of system resource usage.",
+    "crumbs": [
+      "Getting Started with TermiPy"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#exiting-termipy",
+    "href": "getting-started.html#exiting-termipy",
+    "title": "Getting Started",
+    "section": "Exiting TermiPy",
+    "text": "Exiting TermiPy\nTo exit the terminal interface, simply type:\nexit\nThis will close TermiPy and return you to your default shell.",
+    "crumbs": [
+      "Getting Started with TermiPy"
+    ]
+  },
+  {
+    "objectID": "index.html#package-goals",
+    "href": "index.html#package-goals",
+    "title": "TermiPy",
+    "section": "Package Goals",
+    "text": "Package Goals\n\nSimplicity: Provide essential shell functionality in a streamlined way.\nExtensibility: Offer a flexible base for customization and expansion.\nCross-Platform Compatibility: Ensure functionality across major operating systems.",
+    "crumbs": [
+      "Welcome to TermiPy"
+    ]
+  },
+  {
+    "objectID": "index.html#key-features",
+    "href": "index.html#key-features",
+    "title": "TermiPy",
+    "section": "Key Features",
+    "text": "Key Features\n\nFile Management: Easily navigate directories, list files, and perform file operations.\nCommand Execution: Run shell commands directly within TermiPy.\nResource Monitoring: Check system stats like CPU, memory, and disk usage.\nEnvironment Setup: Quickly configure Python and R environments.",
+    "crumbs": [
+      "Welcome to TermiPy"
+    ]
+  },
+  {
+    "objectID": "index.html#installation-usage",
+    "href": "index.html#installation-usage",
+    "title": "TermiPy",
+    "section": "Installation & Usage",
+    "text": "Installation & Usage\nInstall via pip and run using Python 3 to get started quickly. Visit Getting Started for more details.",
+    "crumbs": [
+      "Welcome to TermiPy"
+    ]
+  },
+  {
+    "objectID": "index.html#contributions",
+    "href": "index.html#contributions",
+    "title": "TermiPy",
+    "section": "Contributions",
+    "text": "Contributions\nWe welcome contributions! Check out our issues page to get involved.",
+    "crumbs": [
+      "Welcome to TermiPy"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#basic-usage",
+    "href": "getting-started.html#basic-usage",
+    "title": "Getting Started",
+    "section": "Basic Usage",
+    "text": "Basic Usage\nOnce TermiPy is running, you’ll see the TermiPy prompt:\n@termipy &gt;&gt;\nYou can now start entering commands. Here are some basic commands to get you started:\n\necho &lt;message&gt;: Print a message to the terminal\n@termipy &gt;&gt; echo Hello, TermiPy!\ngetwd or ls: Get current working directory\n@termipy &gt;&gt; getwd\nsetwd &lt;directory&gt;: Change directory\n@termipy &gt;&gt; setwd /path/to/directory\ntypeof &lt;command&gt;: Show command type\n@termipy &gt;&gt; typeof echo\nclear (aliases: cls, clr): Clear the screen\n@termipy &gt;&gt; clear\ntree [directory]: Show directory structure\n@termipy &gt;&gt; tree\nhelp: Display help information\n@termipy &gt;&gt; help\nexit: Exit TermiPy\n@termipy &gt;&gt; exit\n\nFor a full list of available commands, use the commands command:\n@termipy &gt;&gt; commands",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#next-steps",
+    "href": "getting-started.html#next-steps",
+    "title": "Getting Started",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nExplore File Handling operations.\nLearn about Setting Up Environments.\nExplore Resource Monitoring.\nCheck out the About for more documentation and support.",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "file-handling.html",
+    "href": "file-handling.html",
+    "title": "File Handling",
+    "section": "",
+    "text": "Listing Files and Directories",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#listing-files-and-directories",
+    "href": "file-handling.html#listing-files-and-directories",
+    "title": "File Handling",
+    "section": "",
+    "text": "getwd or ls\nList contents of the current directory\n@termipy &gt;&gt; getwd\n@termipy &gt;&gt; ls\n\n\ntree [directory]\nShow directory structure\n@termipy &gt;&gt; tree\n@termipy &gt;&gt; tree /path/to/directory",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#navigating-directories",
+    "href": "file-handling.html#navigating-directories",
+    "title": "File Handling",
+    "section": "Navigating Directories",
+    "text": "Navigating Directories\n\nsetwd &lt;directory&gt;\nChange the current working directory\n@termipy &gt;&gt; setwd /path/to/directory",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#creating-files-and-directories",
+    "href": "file-handling.html#creating-files-and-directories",
+    "title": "File Handling",
+    "section": "Creating Files and Directories",
+    "text": "Creating Files and Directories\n\ncreate &lt;path&gt;\nCreate a new file or directory\n@termipy &gt;&gt; create new_file.txt\n@termipy &gt;&gt; create new_directory/",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#deleting-files-and-directories",
+    "href": "file-handling.html#deleting-files-and-directories",
+    "title": "File Handling",
+    "section": "Deleting Files and Directories",
+    "text": "Deleting Files and Directories\n\ndelete &lt;path&gt;\nDelete a file or directory\n@termipy &gt;&gt; delete old_file.txt\n@termipy &gt;&gt; delete old_directory/",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#renaming-files-and-directories",
+    "href": "file-handling.html#renaming-files-and-directories",
+    "title": "File Handling",
+    "section": "Renaming Files and Directories",
+    "text": "Renaming Files and Directories\n\nrename &lt;old&gt; &lt;new&gt;\nRename a file or directory\n@termipy &gt;&gt; rename old_name.txt new_name.txt",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#searching-for-files",
+    "href": "file-handling.html#searching-for-files",
+    "title": "File Handling",
+    "section": "Searching for Files",
+    "text": "Searching for Files\n\nsearch &lt;filename&gt;\nSearch for a file in the current directory and subdirectories\n@termipy &gt;&gt; search important_doc.pdf",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#file-permissions",
+    "href": "file-handling.html#file-permissions",
+    "title": "File Handling",
+    "section": "File Permissions",
+    "text": "File Permissions\n\npermissions &lt;file&gt;\nShow file permissions\n@termipy &gt;&gt; permissions myfile.txt",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#disk-usage",
+    "href": "file-handling.html#disk-usage",
+    "title": "File Handling",
+    "section": "Disk Usage",
+    "text": "Disk Usage\n\ndiskusage [path]\nShow disk usage for a specific path or the current directory\n@termipy &gt;&gt; diskusage\n@termipy &gt;&gt; diskusage /home/user",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#file-details",
+    "href": "file-handling.html#file-details",
+    "title": "File Handling",
+    "section": "File Details",
+    "text": "File Details\n\nabout &lt;file&gt;\nShow file details\n@termipy &gt;&gt; about myfile.txt",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "file-handling.html#tips-for-file-handling",
+    "href": "file-handling.html#tips-for-file-handling",
+    "title": "File Handling",
+    "section": "Tips for File Handling",
+    "text": "Tips for File Handling\n\nUse tab completion to quickly navigate directories and input file names.\nWhen dealing with files or directories with spaces in their names, use quotes:\n\n@termipy &gt;&gt; setwd \"My Documents\"\n\nBe cautious when using the delete command, as it permanently removes files and directories.\nUse the tree command with a depth parameter to limit the levels shown:\n\n@termipy &gt;&gt; tree -L 2",
+    "crumbs": [
+      "File Handling"
+    ]
+  },
+  {
+    "objectID": "setting-environment.html",
+    "href": "setting-environment.html",
+    "title": "Setting Up Environments",
+    "section": "",
+    "text": "Setting Up a Python Environment\nTermiPy allows you to create Python virtual environments using the setpyenv command.",
+    "crumbs": [
+      "Setting Up Environments"
+    ]
+  },
+  {
+    "objectID": "setting-environment.html#setting-up-a-python-environment",
+    "href": "setting-environment.html#setting-up-a-python-environment",
+    "title": "Setting Up Environments",
+    "section": "",
+    "text": "Syntax\nsetpyenv [name] [version]\n\nname: The name of the virtual environment (optional)\nversion: The Python version to use (optional)\n\n\n\nExamples\n\nCreate a virtual environment with default name and Python version:\n\n@termipy &gt;&gt; setpyenv\n\nCreate a virtual environment with a specific name:\n\n@termipy &gt;&gt; setpyenv myproject\n\nCreate a virtual environment with a specific name and Python version:\n\n@termipy &gt;&gt; setpyenv myproject 3.9",
+    "crumbs": [
+      "Setting Up Environments"
+    ]
+  },
+  {
+    "objectID": "setting-environment.html#setting-up-an-r-environment",
+    "href": "setting-environment.html#setting-up-an-r-environment",
+    "title": "Setting Up Environments",
+    "section": "Setting Up an R Environment",
+    "text": "Setting Up an R Environment\nYou can initialize an R environment using the setrenv command.\n\nSyntax\nsetrenv [name]\n\nname: The name of the R environment (optional)\n\n\n\nExample\nCreate an R environment:\n@termipy &gt;&gt; setrenv myRproject",
+    "crumbs": [
+      "Setting Up Environments"
+    ]
+  },
+  {
+    "objectID": "setting-environment.html#managing-environments",
+    "href": "setting-environment.html#managing-environments",
+    "title": "Setting Up Environments",
+    "section": "Managing Environments",
+    "text": "Managing Environments\nOnce you’ve created an environment, you can use standard Python or R commands to manage packages and run scripts within that environment.\n\nActivating Environments\nTermiPy automatically activates the environment upon creation. To switch between environments, you can use the setwd command to navigate to the environment’s directory.\n\n\nInstalling Packages\nUse pip for Python environments:\n@termipy &gt;&gt; pip install package_name\nUse install.packages() for R environments:\n@termipy &gt;&gt; R -e \"install.packages('package_name')\"",
+    "crumbs": [
+      "Setting Up Environments"
+    ]
+  },
+  {
+    "objectID": "setting-environment.html#best-practices",
+    "href": "setting-environment.html#best-practices",
+    "title": "Setting Up Environments",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse descriptive names for your environments to easily identify their purpose.\nCreate separate environments for different projects to avoid package conflicts.\nRegularly update your environments to ensure you’re using the latest package versions.\nDocument the packages and versions used in your project for reproducibility.",
+    "crumbs": [
+      "Setting Up Environments"
+    ]
+  },
+  {
+    "objectID": "setting-environment.html#troubleshooting",
+    "href": "setting-environment.html#troubleshooting",
+    "title": "Setting Up Environments",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nIf you encounter any issues while setting up environments, make sure:\n\nYou have the required Python or R versions installed on your system.\nYou have the necessary permissions to create directories and install packages.\nYour PATH environment variable is correctly set.\nFor R environments, ensure that R is properly installed and accessible from the command line.",
+    "crumbs": [
+      "Setting Up Environments"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Why TermiPy?",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#why-termipy",
+    "href": "about.html#why-termipy",
+    "title": "About",
+    "section": "",
+    "text": "Simplicity: TermiPy focuses on core functionalities without unnecessary complexity.\nExtensibility: Easily add new commands and features to suit your needs.\nCross-Platform: Works seamlessly on Linux, macOS, and Windows.\nPython-Based: Leverages the power and flexibility of Python.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#key-features",
+    "href": "about.html#key-features",
+    "title": "About",
+    "section": "Key Features",
+    "text": "Key Features\n\nFile and Directory Operations:\n\nNavigate directories\nList files\nCreate, delete, and rename files/directories\n\nCommand Execution:\n\nExecute shell commands directly through TermiPy\n\nSystem Resource Monitoring:\n\nView real-time CPU, memory, disk, and network usage statistics\n\nEnvironment Setup:\n\nSet up Python and R environments with ease\n\nCross-Platform Compatibility:\n\nWorks on Linux, macOS, and Windows",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#author",
+    "href": "about.html#author",
+    "title": "About",
+    "section": "Author",
+    "text": "Author\nTermiPy is created and maintained by Pratik Kumar.\n\nWebsite: pr2tik1\nTwitter: @pr2tik1\nGitHub: @pr2tik1\nLinkedIn: @pratik-kumar",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#license",
+    "href": "about.html#license",
+    "title": "About",
+    "section": "License",
+    "text": "License\nTermiPy is open-source software licensed under the MIT License. For more details, see the LICENSE file in the project repository.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#contributing",
+    "href": "about.html#contributing",
+    "title": "About",
+    "section": "Contributing",
+    "text": "Contributing\nContributions, issues, and feature requests are welcome! Feel free to check the issues page on GitHub.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#show-your-support",
+    "href": "about.html#show-your-support",
+    "title": "About",
+    "section": "Show Your Support",
+    "text": "Show Your Support\nIf you find TermiPy helpful, please give it a star on GitHub!",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "resource-stats.html",
+    "href": "resource-stats.html",
+    "title": "Resource Monitoring",
+    "section": "",
+    "text": "Using the Resource Monitoring Command\nTo start monitoring system resources, use one of the following commands:\nor\nor\nThese commands are aliases and will all trigger the same resource monitoring functionality.",
+    "crumbs": [
+      "Resource Monitoring"
+    ]
+  },
+  {
+    "objectID": "resource-stats.html#using-the-resource-monitoring-command",
+    "href": "resource-stats.html#using-the-resource-monitoring-command",
+    "title": "Resource Monitoring",
+    "section": "",
+    "text": "@termipy &gt;&gt; resource\n\n@termipy &gt;&gt; resources\n\n@termipy &gt;&gt; stats",
+    "crumbs": [
+      "Resource Monitoring"
+    ]
+  },
+  {
+    "objectID": "resource-stats.html#understanding-the-output",
+    "href": "resource-stats.html#understanding-the-output",
+    "title": "Resource Monitoring",
+    "section": "Understanding the Output",
+    "text": "Understanding the Output\nThe resource monitoring feature provides information on five key areas:\n\nCPU Usage\nMemory Usage\nDisk Usage\nNetwork Usage\nProcess Usage (Top 5 CPU-consuming processes)\n\n\nCPU Usage\nThis section displays the current CPU usage as a percentage. The percentage is color-coded for quick interpretation:\n\nGreen: 0-69% (Low to moderate usage)\nYellow: 70-89% (High usage)\nRed: 90-100% (Very high usage)\n\nExample output:\n┌───────────────────────────────────────────┐\n│ CPU Usage                                 │\n├───────────────────────────────────────────┤\n│ CPU Usage: 3.5%                           │\n└───────────────────────────────────────────┘\n\n\nMemory Usage\nThis section shows the current memory usage, including:\n\nMemory Usage Percentage (color-coded like CPU usage)\nTotal Memory\nAvailable Memory\n\nExample output:\n┌───────────────────────────────────────────┐\n│ Memory Usage                              │\n├───────────────────────────────────────────┤\n│ Memory Usage: 30.0%                       │\n│ Total Memory: 7.74 GB                     │\n│ Available Memory: 5.42 GB                 │\n└───────────────────────────────────────────┘\n\n\nDisk Usage\nThis section displays information about disk usage:\n\nDisk Usage Percentage (color-coded)\nTotal Disk Space\nFree Disk Space\n\nExample output:\n┌───────────────────────────────────────────┐\n│ Disk Usage                                │\n├───────────────────────────────────────────┤\n│ Disk Usage: 38.0%                         │\n│ Total Disk Space: 31.33 GB                │\n│ Free Disk Space: 18.43 GB                 │\n└───────────────────────────────────────────┘\n\n\nNetwork Usage\nThis section shows the amount of data sent and received over the network:\n\nNetwork Bytes Sent\nNetwork Bytes Received\n\nExample output:\n┌───────────────────────────────────────────┐\n│ Network Usage                             │\n├───────────────────────────────────────────┤\n│ Network Bytes Sent: 346.95 MB             │\n│ Network Bytes Received: 22058.71 MB       │\n└───────────────────────────────────────────┘\n\n\nProcess Usage\nThis section lists the top 5 CPU-consuming processes, including:\n\nProcess ID (PID)\nProcess Name\nCPU Usage Percentage (color-coded)\n\nExample output:\n┌───────────────────────────────────────────┐\n│ Process Usage (Top-5)                     │\n├───────────────────────────────────────────┤\n│ PID: 28520, Name: node, CPU: 1.0%         │\n│ PID: 1, Name: docker-init, CPU: 0.0%      │\n│ PID: 7, Name: sleep, CPU: 0.0%            │\n│ PID: 35, Name: sshd, CPU: 0.0%            │\n│ PID: 412, Name: sh, CPU: 0.0%             │\n└───────────────────────────────────────────┘",
+    "crumbs": [
+      "Resource Monitoring"
+    ]
+  },
+  {
+    "objectID": "resource-stats.html#continuous-monitoring",
+    "href": "resource-stats.html#continuous-monitoring",
+    "title": "Resource Monitoring",
+    "section": "Continuous Monitoring",
+    "text": "Continuous Monitoring\nThe resource monitoring feature updates every second, providing a real-time view of your system’s resource usage. The display is refreshed automatically, clearing the screen and showing the latest information.\nTo stop the monitoring, press Ctrl+C. You’ll see a message confirming that the monitoring has stopped:\nStopped monitoring resource usage.",
+    "crumbs": [
+      "Resource Monitoring"
+    ]
+  },
+  {
+    "objectID": "resource-stats.html#use-cases",
+    "href": "resource-stats.html#use-cases",
+    "title": "Resource Monitoring",
+    "section": "Use Cases",
+    "text": "Use Cases\n\nPerformance Troubleshooting: Identify resource-intensive processes that might be causing system slowdowns.\nCapacity Planning: Monitor resource usage over time to determine if you need to upgrade your hardware.\nApplication Testing: Monitor resource usage while testing applications to ensure they’re not consuming excessive resources.\nSystem Health Checks: Regularly check your system’s resource usage to ensure it’s operating within expected parameters.",
+    "crumbs": [
+      "Resource Monitoring"
+    ]
+  },
+  {
+    "objectID": "resource-stats.html#tips-for-using-resource-monitoring",
+    "href": "resource-stats.html#tips-for-using-resource-monitoring",
+    "title": "Resource Monitoring",
+    "section": "Tips for Using Resource Monitoring",
+    "text": "Tips for Using Resource Monitoring\n\nRun the monitoring command before and after starting a resource-intensive task to see its impact on your system.\nUse the color-coding to quickly identify areas of concern (yellow and red indicators).\nPay attention to the top CPU-consuming processes to identify any unexpected or misbehaving applications.\nMonitor network usage to detect unusual spikes in data transfer, which could indicate network issues or unauthorized data transfers.\n\nRemember, the resource monitoring feature in TermiPy provides a snapshot of your system’s current state. For long-term monitoring or more detailed analysis, you may want to consider dedicated system monitoring tools.",
+    "crumbs": [
+      "Resource Monitoring"
+    ]
+  }
+]

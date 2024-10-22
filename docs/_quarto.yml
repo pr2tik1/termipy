@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "TermiPy"
+  author: "Pratik Kumar"
+  date: "10/22/2024"
+  cover-image: TermiPy-logo.png
+  chapters:
+    - index.qmd
+    - getting-started.qmd
+    - file-handling.qmd
+    - setting-environment.qmd
+    - resource-stats.qmd
+    - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-depth: 0
+  pdf:
+    theme: cosmo
+    toc: true
+    documentclass: scrreprt
+    

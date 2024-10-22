@@ -19,7 +19,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'termipy=termipy.main:main',
+            'termipy=termipy.main',
         ],
     },
     classifiers=[

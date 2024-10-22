@@ -1,0 +1,122 @@
+# File Handling in TermiPy {.unnumbered}
+
+TermiPy provides a range of commands for file and directory operations. This guide covers the most commonly used file handling commands.
+
+## Listing Files and Directories
+
+### getwd or ls
+List contents of the current directory
+
+```bash
+@termipy >> getwd
+@termipy >> ls
+```
+
+### tree [directory]
+
+Show directory structure
+
+```bash
+@termipy >> tree
+@termipy >> tree /path/to/directory
+```
+
+## Navigating Directories
+
+### setwd `<directory>`
+
+Change the current working directory
+
+```bash
+@termipy >> setwd /path/to/directory
+```
+
+## Creating Files and Directories
+
+### create `<path>`
+
+Create a new file or directory
+
+```bash
+@termipy >> create new_file.txt
+@termipy >> create new_directory/
+```
+
+## Deleting Files and Directories
+
+### delete `<path>`
+
+Delete a file or directory
+
+```bash
+@termipy >> delete old_file.txt
+@termipy >> delete old_directory/
+```
+
+## Renaming Files and Directories
+
+### rename `<old>` `<new>`
+
+Rename a file or directory
+
+```bash
+@termipy >> rename old_name.txt new_name.txt
+```
+
+## Searching for Files
+
+### search `<filename>`
+
+Search for a file in the current directory and subdirectories
+
+```bash
+@termipy >> search important_doc.pdf
+```
+
+## File Permissions
+
+### permissions `<file>`
+
+Show file permissions
+
+```bash
+@termipy >> permissions myfile.txt
+```
+
+## Disk Usage
+
+### diskusage [path]
+
+Show disk usage for a specific path or the current directory
+
+```bash
+@termipy >> diskusage
+@termipy >> diskusage /home/user
+```
+
+## File Details
+
+### about `<file>`
+
+Show file details
+
+```bash
+@termipy >> about myfile.txt
+```
+
+## Tips for File Handling
+
+1. Use tab completion to quickly navigate directories and input file names.
+2. When dealing with files or directories with spaces in their names, use quotes:
+
+```bash
+@termipy >> setwd "My Documents"
+```
+
+
+3. Be cautious when using the `delete` command, as it permanently removes files and directories.
+4. Use the `tree` command with a depth parameter to limit the levels shown:
+
+```bash
+@termipy >> tree -L 2
+```

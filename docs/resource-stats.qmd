@@ -1,0 +1,165 @@
+
+# Resource Monitoring {.unnumbered} 
+
+TermiPy provides a powerful resource monitoring feature that allows you to track system resource usage in real-time. This guide will explain how to use the resource monitoring commands and interpret the output.
+
+## Using the Resource Monitoring Command
+
+To start monitoring system resources, use one of the following commands:
+
+```bash
+@termipy >> resource
+```
+
+or 
+
+```bash
+@termipy >> resources
+```
+
+or 
+
+```bash
+@termipy >> stats
+```
+
+These commands are aliases and will all trigger the same resource monitoring functionality.
+
+## Understanding the Output
+
+The resource monitoring feature provides information on five key areas:
+
+1. CPU Usage
+2. Memory Usage
+3. Disk Usage
+4. Network Usage
+5. Process Usage (Top 5 CPU-consuming processes)
+
+
+### CPU Usage
+
+This section displays the current CPU usage as a percentage. The percentage is color-coded for quick interpretation:
+
+- Green: 0-69% (Low to moderate usage)
+- Yellow: 70-89% (High usage)
+- Red: 90-100% (Very high usage)
+
+
+Example output:
+
+```bash
+┌───────────────────────────────────────────┐
+│ CPU Usage                                 │
+├───────────────────────────────────────────┤
+│ CPU Usage: 3.5%                           │
+└───────────────────────────────────────────┘
+```
+
+### Memory Usage
+
+This section shows the current memory usage, including:
+
+- Memory Usage Percentage (color-coded like CPU usage)
+- Total Memory
+- Available Memory
+
+
+Example output:
+
+```bash
+┌───────────────────────────────────────────┐
+│ Memory Usage                              │
+├───────────────────────────────────────────┤
+│ Memory Usage: 30.0%                       │
+│ Total Memory: 7.74 GB                     │
+│ Available Memory: 5.42 GB                 │
+└───────────────────────────────────────────┘
+```
+
+### Disk Usage
+
+This section displays information about disk usage:
+
+- Disk Usage Percentage (color-coded)
+- Total Disk Space
+- Free Disk Space
+
+
+Example output:
+
+```bash
+┌───────────────────────────────────────────┐
+│ Disk Usage                                │
+├───────────────────────────────────────────┤
+│ Disk Usage: 38.0%                         │
+│ Total Disk Space: 31.33 GB                │
+│ Free Disk Space: 18.43 GB                 │
+└───────────────────────────────────────────┘
+```
+
+### Network Usage
+
+This section shows the amount of data sent and received over the network:
+
+- Network Bytes Sent
+- Network Bytes Received
+
+
+Example output:
+
+```bash
+┌───────────────────────────────────────────┐
+│ Network Usage                             │
+├───────────────────────────────────────────┤
+│ Network Bytes Sent: 346.95 MB             │
+│ Network Bytes Received: 22058.71 MB       │
+└───────────────────────────────────────────┘
+```
+
+### Process Usage
+
+This section lists the top 5 CPU-consuming processes, including:
+
+- Process ID (PID)
+- Process Name
+- CPU Usage Percentage (color-coded)
+
+
+Example output:
+
+```bash
+┌───────────────────────────────────────────┐
+│ Process Usage (Top-5)                     │
+├───────────────────────────────────────────┤
+│ PID: 28520, Name: node, CPU: 1.0%         │
+│ PID: 1, Name: docker-init, CPU: 0.0%      │
+│ PID: 7, Name: sleep, CPU: 0.0%            │
+│ PID: 35, Name: sshd, CPU: 0.0%            │
+│ PID: 412, Name: sh, CPU: 0.0%             │
+└───────────────────────────────────────────┘
+```
+
+## Continuous Monitoring
+
+The resource monitoring feature updates every second, providing a real-time view of your system's resource usage. The display is refreshed automatically, clearing the screen and showing the latest information.
+
+To stop the monitoring, press `Ctrl+C`. You'll see a message confirming that the monitoring has stopped:
+
+```bash
+Stopped monitoring resource usage.
+```
+
+## Use Cases
+
+1. **Performance Troubleshooting**: Identify resource-intensive processes that might be causing system slowdowns.
+2. **Capacity Planning**: Monitor resource usage over time to determine if you need to upgrade your hardware.
+3. **Application Testing**: Monitor resource usage while testing applications to ensure they're not consuming excessive resources.
+4. **System Health Checks**: Regularly check your system's resource usage to ensure it's operating within expected parameters.
+
+
+## Tips for Using Resource Monitoring
+
+1. Run the monitoring command before and after starting a resource-intensive task to see its impact on your system.
+2. Use the **color-coding** to quickly identify areas of concern (yellow and red indicators).
+3. Pay attention to the top CPU-consuming processes to identify any unexpected or misbehaving applications.
+4. Monitor network usage to detect unusual spikes in data transfer, which could indicate network issues or unauthorized data transfers.

@@ -1,0 +1,50 @@
+# About TermiPy {.unnumbered}
+
+TermiPy is a simple command-line shell providing essential shell functionalities such as directory navigation, file listing, and command execution. It is designed to be minimal, lightweight, and highly extensible for users looking to interact with their file systems through a custom terminal interface.
+
+## Why TermiPy?
+
+- **Simplicity**: TermiPy focuses on core functionalities without unnecessary complexity.
+- **Extensibility**: Easily add new commands and features to suit your needs.
+- **Cross-Platform**: Works seamlessly on Linux, macOS, and Windows.
+- **Python-Based**: Leverages the power and flexibility of Python.
+
+## Key Features
+
+1. **File and Directory Operations**: 
+   - Navigate directories
+   - List files
+   - Create, delete, and rename files/directories
+
+2. **Command Execution**: 
+   - Execute shell commands directly through TermiPy
+
+3. **System Resource Monitoring**: 
+   - View real-time CPU, memory, disk, and network usage statistics
+
+4. **Environment Setup**: 
+   - Set up Python and R environments with ease
+
+5. **Cross-Platform Compatibility**: 
+   - Works on Linux, macOS, and Windows
+
+## Author
+
+TermiPy is created and maintained by Pratik Kumar.
+
+- Website: [pr2tik1](https://pr2tik1.github.io/)
+- Twitter: [@pr2tik1](https://twitter.com/pr2tik1)
+- GitHub: [@pr2tik1](https://github.com/pr2tik1)
+- LinkedIn: [@pratik-kumar](https://www.linkedin.com/in/pratik-kumar/)
+
+## License
+
+TermiPy is open-source software licensed under the MIT License. For more details, see the [LICENSE](https://github.com/pr2tik1/termipy/blob/main/LICENSE) file in the project repository.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/pr2tik1/termipy/issues) on GitHub.
+
+## Show Your Support
+
+If you find TermiPy helpful, please give it a star on GitHub!

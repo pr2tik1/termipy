@@ -14,7 +14,7 @@
     "href": "index.html#package-goals",
     "title": "TermiPy",
     "section": "Package Goals",
-    "text": "Package Goals\n\nSimplicity: Provide essential shell functionality in a streamlined way.\nExtensibility: Offer a flexible base for customization and expansion.\nCross-Platform Compatibility: Ensure functionality across major operating systems.",
+    "text": "Package Goals\nTermiPy aims to achieve the following objectives:\n\nSimplicity: Provide essential shell functionality in a streamlined way.\nExtensibility: Offer a flexible base for customization and expansion.\nCross-Platform Compatibility: Ensure functionality across major operating systems.",
     "crumbs": [
       "Welcome to TermiPy"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#key-features",
     "title": "TermiPy",
     "section": "Key Features",
-    "text": "Key Features\n\nFile Management: Easily navigate directories, list files, and perform file operations.\nCommand Execution: Run shell commands directly within TermiPy.\nResource Monitoring: Check system stats like CPU, memory, and disk usage.\nEnvironment Setup: Quickly configure Python and R environments.",
+    "text": "Key Features\nTermiPy offers a range of features to enhance your command-line experience:\n\nFile Management:\n\nNavigate directories with ease\nList files and directories\nPerform file operations (create, delete, rename)\n\nCommand Execution:\n\nRun shell commands directly within TermiPy\nExecute custom Python scripts\n\nResource Monitoring:\n\nCheck system statistics in real-time\nMonitor CPU usage\nTrack memory utilization\nObserve disk usage\n\nEnvironment Setup:\n\nQuickly configure Python virtual environments\nSet up R environments for data analysis projects\n\nCross-Platform Support:\n\nRun on Linux, macOS, and Windows seamlessly",
     "crumbs": [
       "Welcome to TermiPy"
     ]

@@ -18,15 +18,38 @@ TermiPy is a lightweight and extensible command-line shell designed for users wh
 
 
 ## Package Goals
-- Simplicity: Provide essential shell functionality in a streamlined way.
-- Extensibility: Offer a flexible base for customization and expansion.
-- Cross-Platform Compatibility: Ensure functionality across major operating systems.
+
+TermiPy aims to achieve the following objectives:
+
+1. **Simplicity**: Provide essential shell functionality in a streamlined way.
+2. **Extensibility**: Offer a flexible base for customization and expansion.
+3. **Cross-Platform Compatibility**: Ensure functionality across major operating systems.
 
 ## Key Features
-1. File Management: Easily navigate directories, list files, and perform file operations.
-2. Command Execution: Run shell commands directly within TermiPy.
-3. Resource Monitoring: Check system stats like CPU, memory, and disk usage.
-4. Environment Setup: Quickly configure Python and R environments.
+
+TermiPy offers a range of features to enhance your command-line experience:
+
+1. **File Management**: 
+   - Navigate directories with ease
+   - List files and directories
+   - Perform file operations (create, delete, rename)
+
+2. **Command Execution**: 
+   - Run shell commands directly within TermiPy
+   - Execute custom Python scripts
+
+3. **Resource Monitoring**: 
+   - Check system statistics in real-time
+   - Monitor CPU usage
+   - Track memory utilization
+   - Observe disk usage
+
+4. **Environment Setup**: 
+   - Quickly configure Python virtual environments
+   - Set up R environments for data analysis projects
+
+5. **Cross-Platform Support**: 
+   - Run on Linux, macOS, and Windows seamlessly
 
 ## Installation & Usage
 Install via pip and run using Python 3 to get started quickly. Visit Getting Started for more details.

@@ -153,3 +153,4 @@ dmypy.json
 cython_debug/
 venv*/
 .DS_Store
+docs/site_libs

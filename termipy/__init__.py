@@ -9,7 +9,7 @@ from .system_commands import (EchoCommand, GetWdCommand, SetWdCommand,
 from .environment_commands import SetPyEnvCommand, SetREnvCommand
 from .utility_commands import HelpCommand, CommandsCommand
 
-__version__ = "0.2.4"
+__version__ = "0.2.5"
 __all__ = ['Command', 'ResourceUsageCommand', 'TreeCommand', 'CreateCommand',
            'SearchCommand', 'DeleteCommand', 'RenameCommand', 'PermissionsCommand',
            'EchoCommand', 'GetWdCommand', 'SetWdCommand', 'TypeOfCommand',

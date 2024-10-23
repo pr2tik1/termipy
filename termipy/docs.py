@@ -16,7 +16,7 @@ commands for file operations, system management, and more.
 Type 'help' for a list of available commands and their usage.
 
 Author: Pratik Kumar
-Version: 0.2.4
+Version: 0.2.5
 Date: 2024-10-12
 Contact: pr2tik1@gmail.com
 """

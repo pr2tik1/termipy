@@ -14,6 +14,7 @@ import re
 init(autoreset=True)
 
 class ResourceUsageCommand(Command):
+    """Display system resource usage information."""
     def __init__(self):
         self.max_width = self.calculate_max_width()
         self.output = []
@@ -33,7 +34,7 @@ class ResourceUsageCommand(Command):
             len(f"Memory Usage: 100%"),
             len(f"Disk Usage: 100%"),
             len(f"Network Bytes Sent: 100 MB"),
-            len(f"PID: 9999, Name: ProcessName, CPU: 100%")
+            len(f"PID: 9999, Name: VeryLongProcessNameThatCanTakeMuchOfTheSpaceButMoreIsGood?, CPU: 100%")
         ]
         
         return max(max(len(title) for title in titles), max(content_widths)) + 4
@@ -68,58 +69,87 @@ class ResourceUsageCommand(Command):
 
     def cpu_usage(self):
         """Displays CPU usage."""
-        cpu_percent = psutil.cpu_percent(interval=1)
-        title = "CPU Usage"
-        content = [
-            f"CPU Usage: {self.color_percentage(cpu_percent)}"
-        ]
-        self.print_in_block(title, content)
+        try:
+            cpu_percent = psutil.cpu_percent(interval=1)
+            title = "CPU Usage"
+            content = [
+                f"CPU Usage: {self.color_percentage(cpu_percent)}"
+            ]
+            self.print_in_block(title, content)
+        except Exception as e:
+            self.print_in_block("CPU Usage", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
 
     def memory_usage(self):
         """Displays memory usage."""
-        memory = psutil.virtual_memory()
-        title = "Memory Usage"
-        content = [
-            f"Memory Usage: {self.color_percentage(memory.percent)}",
-            f"Total Memory: {memory.total / (1024 ** 3):.2f} GB",
-            f"Available Memory: {Fore.CYAN}{memory.available / (1024 ** 3):.2f} GB{Style.RESET_ALL}"
-        ]
-        self.print_in_block(title, content)
+        try:
+            memory = psutil.virtual_memory()
+            title = "Memory Usage"
+            content = [
+                f"Memory Usage: {self.color_percentage(memory.percent)}",
+                f"Total Memory: {memory.total / (1024 ** 3):.2f} GB",
+                f"Available Memory: {Fore.CYAN}{memory.available / (1024 ** 3):.2f} GB{Style.RESET_ALL}"
+            ]
+            self.print_in_block(title, content)
+        except Exception as e:
+            self.print_in_block("Memory Usage", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
 
     def disk_usage(self):
         """Displays disk usage."""
-        disk = psutil.disk_usage('/')
-        title = "Disk Usage"
-        content = [
-            f"Disk Usage: {self.color_percentage(disk.percent)}",
-            f"Total Disk Space: {disk.total / (1024 ** 3):.2f} GB",
-            f"Free Disk Space: {Fore.CYAN}{disk.free / (1024 ** 3):.2f} GB{Style.RESET_ALL}"
-        ]
-        self.print_in_block(title, content)
+        try:
+            disk = psutil.disk_usage('/')
+            title = "Disk Usage"
+            content = [
+                f"Disk Usage: {self.color_percentage(disk.percent)}",
+                f"Total Disk Space: {disk.total / (1024 ** 3):.2f} GB",
+                f"Free Disk Space: {Fore.CYAN}{disk.free / (1024 ** 3):.2f} GB{Style.RESET_ALL}"
+            ]
+            self.print_in_block(title, content)
+        except Exception as e:
+            self.print_in_block("Disk Usage", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
 
     def network_usage(self):
         """Displays network usage."""
-        net_io = psutil.net_io_counters()
-        title = "Network Usage"
-        content = [
-            f"Network Bytes Sent: {Fore.YELLOW}{net_io.bytes_sent / (1024 ** 2):.2f} MB{Style.RESET_ALL}",
-            f"Network Bytes Received: {Fore.YELLOW}{net_io.bytes_recv / (1024 ** 2):.2f} MB{Style.RESET_ALL}"
-        ]
-        self.print_in_block(title, content)
+        try:
+            net_io = psutil.net_io_counters()
+            title = "Network Usage"
+            content = [
+                f"Network Bytes Sent: {Fore.YELLOW}{net_io.bytes_sent / (1024 ** 2):.2f} MB{Style.RESET_ALL}",
+                f"Network Bytes Received: {Fore.YELLOW}{net_io.bytes_recv / (1024 ** 2):.2f} MB{Style.RESET_ALL}"
+            ]
+            self.print_in_block(title, content)
+        except Exception as e:
+            self.print_in_block("Network Usage", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
 
     def process_usage(self):
-        """Displays top 5 CPU-consuming processes."""
-        processes = sorted(psutil.process_iter(['pid', 'name', 'cpu_percent']),
-                           key=lambda x: x.info['cpu_percent'], reverse=True)[:5]
-        title = "Process Usage (Top-5)"
-        content = [f"PID: {Fore.CYAN}{proc.info['pid']}{Style.RESET_ALL}, "
-                   f"Name: {Fore.YELLOW}{proc.info['name']}{Style.RESET_ALL}, "
-                   f"CPU: {self.color_percentage(proc.info['cpu_percent'])}"
-                   for proc in processes]
-        self.print_in_block(title, content)
+        """Displays top 10 CPU-consuming processes."""
+        try:
+            # Get the top 10 CPU-consuming processes
+            processes = sorted(
+                (proc for proc in psutil.process_iter(['pid', 'name', 'cpu_percent']) if proc.info['cpu_percent'] is not None),
+                key=lambda x: x.info['cpu_percent'],
+                reverse=True
+            )[:10]
+            
+            title = "Process Usage (Top-10)"
+            pid_col_width = 10
+            name_col_width = 30
+            cpu_col_width = 10
+            content = [
+                f"{'PID:':<{pid_col_width}} {Fore.CYAN}{str(proc.info['pid']):<{pid_col_width}}{Style.RESET_ALL} "
+                f"{'Name:':} {Fore.YELLOW}{proc.info['name'][:name_col_width]:<{name_col_width}}{Style.RESET_ALL} " 
+                f"{'CPU:':<{cpu_col_width}} {self.color_percentage(proc.info['cpu_percent']):<{cpu_col_width}}"
+                for proc in processes
+            ]
+            self.print_in_block(title, content)
+            
+        except Exception as e:
+            self.print_in_block("Process Usage", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
+
 
     def execute(self, args: List[str]) -> bool:
-        """Continuously monitor and display resource usage until interrupted."""
+        if self.handle_help_flag(args):
+            return True
+        
         try:
             while True:
                 self.output = []
@@ -129,16 +159,20 @@ class ResourceUsageCommand(Command):
                 self.network_usage()
                 self.process_usage()
                 self.output.append(f"{Fore.YELLOW}Press Ctrl+C to STOP monitoring.{Style.RESET_ALL}")
-
-                # Clear the screen and move cursor to top-left
                 print("\033[2J\033[H", end="")
-                
-                # Print the entire output at once
                 print("\n".join(self.output))
-
                 time.sleep(1)
 
         except KeyboardInterrupt:
             print(f"\n{Fore.GREEN}Stopped monitoring resource usage.{Style.RESET_ALL}")
+        except Exception as e:
+            print(f"\n{Fore.RED}An unexpected error occurred: {str(e)}{Style.RESET_ALL}")
         
         return True
+
+    def print_help(self):
+        super().print_help()
+        print("\nOptions:")
+        print("  No options available. Press Ctrl+C to stop monitoring.")
+        print("\nExample:")
+        print("  resource")

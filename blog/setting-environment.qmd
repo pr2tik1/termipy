@@ -1,0 +1,100 @@
+# Setting Up Environments {.unnumbered}
+
+TermiPy provides commands to easily set up Python and R environments. This guide will walk you through the process of creating and managing these environments.
+
+## Setting Up a Python Environment
+
+TermiPy allows you to create Python virtual environments using the `setpyenv` command.
+
+### Syntax
+
+```bash
+setpyenv [name] [version]
+```
+
+- `name`: The name of the virtual environment (optional)
+- `version`: The Python version to use (optional)
+
+
+### Examples
+
+1. Create a virtual environment with default name and Python version:
+
+
+```bash
+@termipy >> setpyenv
+```
+
+2. Create a virtual environment with a specific name:
+
+
+```bash
+@termipy >> setpyenv myproject
+```
+
+3. Create a virtual environment with a specific name and Python version:
+
+
+```bash
+@termipy >> setpyenv myproject 3.9
+```
+
+## Setting Up an R Environment
+
+You can initialize an R environment using the `setrenv` command.
+
+### Syntax
+
+```bash
+setrenv [name]
+```
+
+- `name`: The name of the R environment (optional)
+
+
+### Example
+
+Create an R environment:
+
+```bash
+@termipy >> setrenv myRproject
+```
+
+## Managing Environments
+
+Once you've created an environment, you can use standard Python or R commands to manage packages and run scripts within that environment.
+
+### Activating Environments
+
+TermiPy automatically activates the environment upon creation. To switch between environments, you can use the `setwd` command to navigate to the environment's directory.
+
+### Installing Packages
+
+Use pip for Python environments:
+
+```bash
+@termipy >> pip install package_name
+```
+
+Use install.packages() for R environments:
+
+```bash
+@termipy >> R -e "install.packages('package_name')"
+```
+
+## Best Practices
+
+1. Use descriptive names for your environments to easily identify their purpose.
+2. Create separate environments for different projects to avoid package conflicts.
+3. Regularly update your environments to ensure you're using the latest package versions.
+4. Document the packages and versions used in your project for reproducibility.
+
+
+## Troubleshooting
+
+If you encounter any issues while setting up environments, make sure:
+
+1. You have the required Python or R versions installed on your system.
+2. You have the necessary permissions to create directories and install packages.
+3. Your PATH environment variable is correctly set.
+4. For R environments, ensure that R is properly installed and accessible from the command line.

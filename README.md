@@ -57,32 +57,7 @@ If you encounter any PATH issues, you can use:
 PATH="/usr/bin:/usr/local/bin" termipy
 ```
 
-## 📚 Available Commands
-
-| Command | Description
-|-----|-----
-| `echo <message>` | Print a message to the terminal
-| `getwd`, `ls` | Get current working directory
-| `setwd <directory>` | Change directory
-| `typeof <command>` | Show command type
-| `clear` (aliases: `cls`, `clr`) | Clear the screen
-| `tree [directory]` | Show directory structure
-| `create <path>` | Create file or directory
-| `search <filename>` | Search for a file
-| `setpyenv [name] [version]` | Create Python virtual environment
-| `setrenv [name]` | Initialize R environment
-| `about <file>` | Show file details
-| `commands` | List all available commands
-| `delete <path>` | Delete file or directory
-| `rename <old> <new>` | Rename file or directory
-| `diskusage [path]` | Show disk usage
-| `permissions <file>` | Show file permissions
-| `resource`, `resources`, `stats` | Show system resource usage
-| `help` | Display help information
-| `exit` | Exit TermiPy
-
-
-For more information on a specific command, use: `<command> -h`
+Visit Documentation here for more detailed usage and examples - https://pr2tik1.github.io/termipy/
 
 ## 🤝 Contributing
 

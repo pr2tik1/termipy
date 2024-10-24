@@ -5,6 +5,7 @@ This module contains commands that deal with system resource usage.
 """
 
 import psutil
+import shutil
 import time
 from typing import List
 from termipy.base_command import Command
@@ -96,16 +97,25 @@ class ResourceUsageCommand(Command):
     def disk_usage(self):
         """Displays disk usage."""
         try:
-            disk = psutil.disk_usage('/')
+            # Get disk usage statistics
+            total, used, free = shutil.disk_usage("/")
+            total_gb = total / (1024 ** 3)  # Convert bytes to GB
+            used_gb = used / (1024 ** 3)
+            free_gb = free / (1024 ** 3)
+            percent_used = (used / total) * 100
+
+            # Prepare the output
             title = "Disk Usage"
             content = [
-                f"Disk Usage: {self.color_percentage(disk.percent)}",
-                f"Total Disk Space: {disk.total / (1024 ** 3):.2f} GB",
-                f"Free Disk Space: {Fore.CYAN}{disk.free / (1024 ** 3):.2f} GB{Style.RESET_ALL}"
+                f"Disk Usage: {self.color_percentage(percent_used)}%",
+                f"Total Disk Space: {total_gb:.2f} GB",
+                f"Used Disk Space: {Fore.YELLOW}{used_gb:.2f} GB{Style.RESET_ALL}",
+                f"Free Disk Space: {Fore.CYAN}{free_gb:.2f} GB{Style.RESET_ALL}"
             ]
             self.print_in_block(title, content)
         except Exception as e:
             self.print_in_block("Disk Usage", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
+
 
     def network_usage(self):
         """Displays network usage."""

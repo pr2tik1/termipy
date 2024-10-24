@@ -10,15 +10,6 @@ from typing import List
 class Command(ABC):
     @abstractmethod
     def execute(self, args: List[str]) -> bool:
-        """
-        Execute the command with the given arguments.
-
-        Args:
-            args (List[str]): List of command arguments.
-
-        Returns:
-            bool: True if the shell should continue running, False otherwise.
-        """
         pass
     
     def print_help(self):

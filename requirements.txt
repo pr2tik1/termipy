@@ -1,3 +1,5 @@
 colorama==0.4.6
 psutil==6.1.0
 setuptools==75.1.0
+GPUtil==1.4.0
+shutil==1.10.0

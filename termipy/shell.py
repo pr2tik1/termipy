@@ -9,7 +9,7 @@ from typing import Dict
 from termipy.base_command import Command
 from termipy.file_commands import TreeCommand, CreateCommand, SearchCommand, DeleteCommand, RenameCommand, PermissionsCommand, AboutCommand
 from termipy.system_commands import EchoCommand, GetWdCommand, SetWdCommand, LsCommand, TypeOfCommand, ClearCommand, DiskUsageCommand, ExitCommand
-from termipy.environment_commands import SetPyEnvCommand, SetREnvCommand
+from termipy.environment_commands import SetPyEnvCommand, SetREnvCommand, CreateDevContainerCommand
 from termipy.utility_commands import HelpCommand, CommandsCommand
 from termipy.resource_commands import ResourceUsageCommand
 from termipy.docs import *
@@ -41,6 +41,7 @@ class TermiPy:
             "resource": ResourceUsageCommand(),
             "resources": ResourceUsageCommand(),
             "stats": ResourceUsageCommand(),
+            "createdevcontainer" : CreateDevContainerCommand(),
         }
 
     def run(self):

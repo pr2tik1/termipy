@@ -7,27 +7,19 @@ This module contains the main TermiPy class that runs the shell.
 import shlex
 from typing import Dict
 from termipy.base_command import Command
-from termipy.file_commands import (
-    TreeCommand, CreateCommand, SearchCommand, DeleteCommand, RenameCommand,
-    PermissionsCommand
-)
-from termipy.system_commands import (
-    EchoCommand, GetWdCommand, SetWdCommand, TypeOfCommand, ClearCommand,
-    DiskUsageCommand, ExitCommand
-)
-from termipy.environment_commands import SetPyEnvCommand, SetREnvCommand
-from termipy.utility_commands import (
-    HelpCommand, AboutCommand, CommandsCommand
-)
+from termipy.file_commands import TreeCommand, CreateCommand, SearchCommand, DeleteCommand, RenameCommand, PermissionsCommand, AboutCommand
+from termipy.system_commands import EchoCommand, GetWdCommand, SetWdCommand, LsCommand, TypeOfCommand, ClearCommand, DiskUsageCommand, ExitCommand
+from termipy.environment_commands import SetPyEnvCommand, SetREnvCommand, CreateDevContainerCommand
+from termipy.utility_commands import HelpCommand, CommandsCommand
 from termipy.resource_commands import ResourceUsageCommand
-from termipy.docs import WELCOME_MESSAGE
+from termipy.docs import *
 
 class TermiPy:
     def __init__(self):
         self.commands: Dict[str, Command] = {
             "echo": EchoCommand(),
             "getwd": GetWdCommand(),
-            "ls": GetWdCommand(),
+            "ls": LsCommand(),
             "setwd": SetWdCommand(),
             "typeof": TypeOfCommand(),
             "clear": ClearCommand(),
@@ -49,6 +41,7 @@ class TermiPy:
             "resource": ResourceUsageCommand(),
             "resources": ResourceUsageCommand(),
             "stats": ResourceUsageCommand(),
+            "createdevcontainer" : CreateDevContainerCommand(),
         }
 
     def run(self):

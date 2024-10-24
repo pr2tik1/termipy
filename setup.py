@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='termipy',
-    version='0.2.0',
+    version='0.2.7',
     author='Pratik Kumar',
     author_email='pr2tik1@gmail.com',
     description='A versatile command-line shell with system monitoring capabilities',

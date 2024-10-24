@@ -7,34 +7,51 @@ WELCOME_MESSAGE = """
    ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║        ██║   
    ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝        ╚═╝   
                                                         
-Welcome to termipy!
+Welcome to TermiPy!
+
+Type 'help' for a list of available commands and their usage.
 
 Author: Pratik Kumar
-Version: 0.2.0
-Date: 2024-10-12
+Version: 0.2.7
+Date: 2024-10-24
 Contact: pr2tik1@gmail.com
+"""
 
-Supported Commands:
-───────────────────────────────────────────────────────
-echo <message>        - Prints the message to the terminal
-getwd, ls             - Displays the current working directory
-setwd <dir>           - Changes the working directory
-typeof <file>         - Shows the type of the file or directory
-clr, cls, clear       - Clears the terminal screen
-tree <dir>            - Displays the directory tree
-create <file>         - Creates a new file
-search <file_name>    - Searches for a file by name
-setpyenv <env>        - Sets up a Python environment
-setrenv <env>         - Sets up an R environment
-about <file>          - Displays file details
-commands              - Lists all available commands
-delete <file/dir>     - Deletes a file or directory
-rename <file> <new>   - Renames a file or directory
-diskusage             - Shows disk usage information
-permissions <file>    - Displays file permissions
-resource, resources, stats - Shows system resource usage
-exit                  - Exits termipy
-───────────────────────────────────────────────────────
+HELP_MESSAGE = """
+Available commands:
 
-Type 'help' for more details on each command.
+File Operations:
+  tree       - Display directory structure in a tree-like format
+  create     - Create a new file or directory
+  search     - Search for files and directories
+  delete     - Delete a file or directory
+  rename     - Rename a file or directory
+  permissions- Check permissions of a file or directory
+
+System Commands:
+  echo       - Print a message to the console
+  getwd      - Display the current working directory
+  ls         - List directory contents
+  setwd      - Change the current working directory
+  typeof     - Display the type of a file or directory
+  clear      - Clear the console screen (aliases: cls, clr)
+  diskusage  - Display disk usage information
+
+Environment Setup:
+  setpyenv   - Set up a Python virtual environment
+  setrenv    - Set up an R environment
+  createdevcontainer - Create a devcontainer (Remote Containers Extension for VSCode)
+
+Utility Commands:
+  help       - Display this help message
+  about      - Display information about TermiPy
+  commands   - List all available commands
+
+Resource Monitoring:
+  resource   - Display system resource usage information (aliases: resources, stats)
+
+Other:
+  exit       - Exit the TermiPy shell
+
+Type '<command> -h' for more information on a specific command.
 """

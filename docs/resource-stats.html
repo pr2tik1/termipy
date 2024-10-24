@@ -189,15 +189,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#using-the-resource-monitoring-command" id="toc-using-the-resource-monitoring-command" class="nav-link active" data-scroll-target="#using-the-resource-monitoring-command">Using the Resource Monitoring Command</a></li>
   <li><a href="#understanding-the-output" id="toc-understanding-the-output" class="nav-link" data-scroll-target="#understanding-the-output">Understanding the Output</a>
   <ul class="collapse">
-  <li><a href="#cpu-usage" id="toc-cpu-usage" class="nav-link" data-scroll-target="#cpu-usage">CPU Usage</a></li>
-  <li><a href="#memory-usage" id="toc-memory-usage" class="nav-link" data-scroll-target="#memory-usage">Memory Usage</a></li>
-  <li><a href="#disk-usage" id="toc-disk-usage" class="nav-link" data-scroll-target="#disk-usage">Disk Usage</a></li>
-  <li><a href="#network-usage" id="toc-network-usage" class="nav-link" data-scroll-target="#network-usage">Network Usage</a></li>
-  <li><a href="#process-usage" id="toc-process-usage" class="nav-link" data-scroll-target="#process-usage">Process Usage</a></li>
+  <li><a href="#system-and-hardware-information" id="toc-system-and-hardware-information" class="nav-link" data-scroll-target="#system-and-hardware-information">System and Hardware Information</a></li>
+  <li><a href="#temperature-and-battery" id="toc-temperature-and-battery" class="nav-link" data-scroll-target="#temperature-and-battery">Temperature and Battery</a></li>
+  <li><a href="#process-and-gpu-usage" id="toc-process-and-gpu-usage" class="nav-link" data-scroll-target="#process-and-gpu-usage">Process and GPU Usage</a></li>
   </ul></li>
   <li><a href="#continuous-monitoring" id="toc-continuous-monitoring" class="nav-link" data-scroll-target="#continuous-monitoring">Continuous Monitoring</a></li>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link" data-scroll-target="#use-cases">Use Cases</a></li>
-  <li><a href="#tips-for-using-resource-monitoring" id="toc-tips-for-using-resource-monitoring" class="nav-link" data-scroll-target="#tips-for-using-resource-monitoring">Tips for Using Resource Monitoring</a></li>
+  <li><a href="#color-coding" id="toc-color-coding" class="nav-link" data-scroll-target="#color-coding">Color Coding</a></li>
+  <li><a href="#use-cases-and-tips" id="toc-use-cases-and-tips" class="nav-link" data-scroll-target="#use-cases-and-tips">Use Cases and Tips</a></li>
   </ul>
 </nav>
     </div>
@@ -226,131 +224,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>TermiPy provides a powerful resource monitoring feature that allows you to track system resource usage in real-time. This guide will explain how to use the resource monitoring commands and interpret the output.</p>
 <section id="using-the-resource-monitoring-command" class="level2">
 <h2 class="anchored" data-anchor-id="using-the-resource-monitoring-command">Using the Resource Monitoring Command</h2>
-<p>To start monitoring system resources, use one of the following commands:</p>
+<p>To start monitoring system resources, use the following command:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> resource</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>or</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> resources</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>or</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>These commands are aliases and will all trigger the same resource monitoring functionality.</p>
 </section>
 <section id="understanding-the-output" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-output">Understanding the Output</h2>
-<p>The resource monitoring feature provides information on five key areas:</p>
+<p>The resource monitoring feature provides information on three key areas:</p>
 <ol type="1">
-<li>CPU Usage</li>
-<li>Memory Usage</li>
-<li>Disk Usage</li>
-<li>Network Usage</li>
-<li>Process Usage (Top 5 CPU-consuming processes)</li>
+<li>System and Hardware Information</li>
+<li>Temperature and Battery</li>
+<li>Process and GPU Usage</li>
 </ol>
-<section id="cpu-usage" class="level3">
-<h3 class="anchored" data-anchor-id="cpu-usage">CPU Usage</h3>
-<p>This section displays the current CPU usage as a percentage. The percentage is color-coded for quick interpretation:</p>
+<section id="system-and-hardware-information" class="level3">
+<h3 class="anchored" data-anchor-id="system-and-hardware-information">System and Hardware Information</h3>
+<p>This section displays various system metrics, including:</p>
 <ul>
-<li>Green: 0-69% (Low to moderate usage)</li>
-<li>Yellow: 70-89% (High usage)</li>
-<li>Red: 90-100% (Very high usage)</li>
-</ul>
-<p>Example output:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌───────────────────────────────────────────┐</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU Usage                                 │</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├───────────────────────────────────────────┤</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU Usage: 3.5%                           │</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">└───────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="memory-usage" class="level3">
-<h3 class="anchored" data-anchor-id="memory-usage">Memory Usage</h3>
-<p>This section shows the current memory usage, including:</p>
-<ul>
-<li>Memory Usage Percentage (color-coded like CPU usage)</li>
-<li>Total Memory</li>
+<li>OS information</li>
+<li>CPU details</li>
+<li>Total RAM</li>
+<li>System uptime</li>
+<li>CPU Usage (color-coded)</li>
+<li>Memory Usage (color-coded)</li>
 <li>Available Memory</li>
-</ul>
-<p>Example output:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌───────────────────────────────────────────┐</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Memory Usage                              │</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├───────────────────────────────────────────┤</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Memory Usage: 30.0%                       │</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Total Memory: 7.74 GB                     │</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Available Memory: 5.42 GB                 │</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">└───────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="disk-usage" class="level3">
-<h3 class="anchored" data-anchor-id="disk-usage">Disk Usage</h3>
-<p>This section displays information about disk usage:</p>
-<ul>
-<li>Disk Usage Percentage (color-coded)</li>
-<li>Total Disk Space</li>
+<li>Disk Usage (color-coded)</li>
 <li>Free Disk Space</li>
+<li>Network data sent and received</li>
 </ul>
 <p>Example output:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌───────────────────────────────────────────┐</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Disk Usage                                │</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├───────────────────────────────────────────┤</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Disk Usage: 38.0%                         │</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Total Disk Space: 31.33 GB                │</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Free Disk Space: 18.43 GB                 │</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">└───────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> System and Hardware Information                                                │</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> OS: Windows                                                                    │</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU: 4 cores <span class="er">(</span><span class="ex">8</span> threads<span class="kw">)</span>                                                       <span class="ex">│</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Total RAM: 16.00 GB                                                            │</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Uptime: 2d 3h 45m 30s                                                          │</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU Usage: 5.0%                                                                │</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Memory Usage: 60.0%                                                            │</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Available Memory: 6.40 GB                                                      │</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Disk Usage: 75.0%                                                              │</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Free Disk Space: 250.00 GB                                                     │</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Sent: 100.50 MB                                                        │</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Recv: 1024.75 MB                                                       │</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="network-usage" class="level3">
-<h3 class="anchored" data-anchor-id="network-usage">Network Usage</h3>
-<p>This section shows the amount of data sent and received over the network:</p>
+<section id="temperature-and-battery" class="level3">
+<h3 class="anchored" data-anchor-id="temperature-and-battery">Temperature and Battery</h3>
+<p>This section shows temperature information (if available) and battery status:</p>
 <ul>
-<li>Network Bytes Sent</li>
-<li>Network Bytes Received</li>
+<li>CPU Temperature (if available)</li>
+<li>Battery percentage (if applicable)</li>
+<li>Power status</li>
+<li>Estimated battery time left (if applicable)</li>
 </ul>
 <p>Example output:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌───────────────────────────────────────────┐</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Usage                             │</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├───────────────────────────────────────────┤</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Bytes Sent: 346.95 MB             │</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Bytes Received: 22058.71 MB       │</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">└───────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Temperature and Battery                                                        │</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU Temp <span class="er">(</span><span class="ex">coretemp</span><span class="kw">)</span><span class="bu">:</span> 45°C                                                      │</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Battery: 80.0%                                                                 │</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Power Plugged: No                                                              │</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Time Left: 3h 30m                                                              │</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="process-usage" class="level3">
-<h3 class="anchored" data-anchor-id="process-usage">Process Usage</h3>
-<p>This section lists the top 5 CPU-consuming processes, including:</p>
+<section id="process-and-gpu-usage" class="level3">
+<h3 class="anchored" data-anchor-id="process-and-gpu-usage">Process and GPU Usage</h3>
+<p>This section lists the top 5 CPU-consuming processes and GPU information (if available):</p>
 <ul>
 <li>Process ID (PID)</li>
 <li>Process Name</li>
-<li>CPU Usage Percentage (color-coded)</li>
+<li>CPU Usage Percentage</li>
+<li>GPU Name, Usage, Memory, and Temperature (if applicable)</li>
 </ul>
 <p>Example output:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌───────────────────────────────────────────┐</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process Usage <span class="er">(</span><span class="ex">Top-5</span><span class="kw">)</span>                     <span class="ex">│</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├───────────────────────────────────────────┤</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> PID: 28520, Name: node, CPU: 1.0%         │</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> PID: 1, Name: docker-init, CPU: 0.0%      │</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> PID: 7, Name: sleep, CPU: 0.0%            │</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> PID: 35, Name: sshd, CPU: 0.0%            │</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> PID: 412, Name: sh, CPU: 0.0%             │</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="ex">└───────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process and GPU Usage                                                          │</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 1: PID: 1234   Name: chrome.exe       CPU: 10.5%                       │</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 2: PID: 5678   Name: python.exe       CPU: 5.2%                        │</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 3: PID: 9101   Name: explorer.exe     CPU: 2.1%                        │</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 4: PID: 1122   Name: vscode.exe       CPU: 1.8%                        │</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 5: PID: 3344   Name: spotify.exe      CPU: 1.5%                        │</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0: NVIDIA GeForce RTX 3080                                                 │</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Usage: 30.0%                                                             │</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Memory: 40.0%                                                            │</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Temperature: 65°C                                                        │</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="continuous-monitoring" class="level2">
 <h2 class="anchored" data-anchor-id="continuous-monitoring">Continuous Monitoring</h2>
-<p>The resource monitoring feature updates every second, providing a real-time view of your system’s resource usage. The display is refreshed automatically, clearing the screen and showing the latest information.</p>
+<p>The resource monitoring feature updates every 2 seconds, providing a near real-time view of your system’s resource usage. The display is refreshed automatically, clearing the screen and showing the latest information.</p>
 <p>To stop the monitoring, press <code>Ctrl+C</code>. You’ll see a message confirming that the monitoring has stopped:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopped</span> monitoring resource usage.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopped</span> monitoring resource usage.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="use-cases" class="level2">
-<h2 class="anchored" data-anchor-id="use-cases">Use Cases</h2>
-<ol type="1">
-<li><strong>Performance Troubleshooting</strong>: Identify resource-intensive processes that might be causing system slowdowns.</li>
-<li><strong>Capacity Planning</strong>: Monitor resource usage over time to determine if you need to upgrade your hardware.</li>
-<li><strong>Application Testing</strong>: Monitor resource usage while testing applications to ensure they’re not consuming excessive resources.</li>
-<li><strong>System Health Checks</strong>: Regularly check your system’s resource usage to ensure it’s operating within expected parameters.</li>
-</ol>
+<section id="color-coding" class="level2">
+<h2 class="anchored" data-anchor-id="color-coding">Color Coding</h2>
+<p>The output uses color coding to help quickly identify resource usage levels:</p>
+<ul>
+<li>Green: Low usage (0-49%)</li>
+<li>Yellow: Moderate usage (50-79%)</li>
+<li>Red: High usage (80-100%)</li>
+</ul>
+<p>For temperatures: - Green: Cool (&lt; 60°C) - Yellow: Warm (60-79°C) - Red: Hot (≥ 80°C)</p>
 </section>
-<section id="tips-for-using-resource-monitoring" class="level2">
-<h2 class="anchored" data-anchor-id="tips-for-using-resource-monitoring">Tips for Using Resource Monitoring</h2>
-<ol type="1">
-<li>Run the monitoring command before and after starting a resource-intensive task to see its impact on your system.</li>
-<li>Use the <strong>color-coding</strong> to quickly identify areas of concern (yellow and red indicators).</li>
-<li>Pay attention to the top CPU-consuming processes to identify any unexpected or misbehaving applications.</li>
-<li>Monitor network usage to detect unusual spikes in data transfer, which could indicate network issues or unauthorized data transfers.</li>
-</ol>
+<section id="use-cases-and-tips" class="level2">
+<h2 class="anchored" data-anchor-id="use-cases-and-tips">Use Cases and Tips</h2>
+<p>[The existing Use Cases and Tips sections can remain as they are, as they are still applicable to the updated functionality.]</p>
 
 
 </section>

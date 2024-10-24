@@ -151,3 +151,6 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+venv*/
+.DS_Store
+docs/site_libs

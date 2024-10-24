@@ -1,6 +1,6 @@
 # Setting Up Environments {.unnumbered}
 
-TermiPy provides commands to easily set up Python and R environments. This guide will walk you through the process of creating and managing these environments.
+TermiPy provides commands to easily set up Python and R environments, as well as create DevContainer configurations. This guide will walk you through the process of creating and managing these environments.
 
 ## Setting Up a Python Environment
 
@@ -82,13 +82,46 @@ Use install.packages() for R environments:
 @termipy >> R -e "install.packages('package_name')"
 ```
 
+
+## Creating a DevContainer Configuration
+
+TermiPy allows you to create a DevContainer configuration using the `createdevcontainer` command.
+
+### Syntax
+
+```bash
+createdevcontainer
+```
+
+This command runs interactively, prompting you for information to create the DevContainer configuration.
+
+### Example
+
+Create a DevContainer configuration:
+
+```bash
+@termipy >> createdevcontainer
+```
+
+The command will guide you through the process, asking for:
+
+1. Whether you want to use a custom `devcontainer.json` file
+2. Container name
+3. Image URL or custom image location
+4. Features to include (e.g., Git, Python)
+5. VS Code extensions to install
+6. Additional settings
+
+After providing the necessary information, TermiPy will create a `.devcontainer/devcontainer.json` file in your current directory.
+
+
 ## Best Practices
 
 1. Use descriptive names for your environments to easily identify their purpose.
 2. Create separate environments for different projects to avoid package conflicts.
 3. Regularly update your environments to ensure you're using the latest package versions.
 4. Document the packages and versions used in your project for reproducibility.
-
+5. When creating a DevContainer, consider the specific needs of your project and include only the necessary features and extensions.
 
 ## Troubleshooting
 
@@ -98,3 +131,5 @@ If you encounter any issues while setting up environments, make sure:
 2. You have the necessary permissions to create directories and install packages.
 3. Your PATH environment variable is correctly set.
 4. For R environments, ensure that R is properly installed and accessible from the command line.
+5. For DevContainer issues, ensure that Docker is properly installed and running on your system.
+6. Check that the specified image URL or custom image location is correct and accessible.

@@ -201,6 +201,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#activating-environments" id="toc-activating-environments" class="nav-link" data-scroll-target="#activating-environments">Activating Environments</a></li>
   <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link" data-scroll-target="#installing-packages">Installing Packages</a></li>
   </ul></li>
+  <li><a href="#creating-a-devcontainer-configuration" id="toc-creating-a-devcontainer-configuration" class="nav-link" data-scroll-target="#creating-a-devcontainer-configuration">Creating a DevContainer Configuration</a>
+  <ul class="collapse">
+  <li><a href="#syntax-2" id="toc-syntax-2" class="nav-link" data-scroll-target="#syntax-2">Syntax</a></li>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
+  </ul></li>
   <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   </ul>
@@ -228,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>TermiPy provides commands to easily set up Python and R environments. This guide will walk you through the process of creating and managing these environments.</p>
+<p>TermiPy provides commands to easily set up Python and R environments, as well as create DevContainer configurations. This guide will walk you through the process of creating and managing these environments.</p>
 <section id="setting-up-a-python-environment" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-a-python-environment">Setting Up a Python Environment</h2>
 <p>TermiPy allows you to create Python virtual environments using the <code>setpyenv</code> command.</p>
@@ -287,6 +292,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> R <span class="at">-e</span> <span class="st">"install.packages('package_name')"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
+<section id="creating-a-devcontainer-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-devcontainer-configuration">Creating a DevContainer Configuration</h2>
+<p>TermiPy allows you to create a DevContainer configuration using the <code>createdevcontainer</code> command.</p>
+<section id="syntax-2" class="level3">
+<h3 class="anchored" data-anchor-id="syntax-2">Syntax</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">createdevcontainer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This command runs interactively, prompting you for information to create the DevContainer configuration.</p>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p>Create a DevContainer configuration:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> createdevcontainer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The command will guide you through the process, asking for:</p>
+<ol type="1">
+<li>Whether you want to use a custom <code>devcontainer.json</code> file</li>
+<li>Container name</li>
+<li>Image URL or custom image location</li>
+<li>Features to include (e.g., Git, Python)</li>
+<li>VS Code extensions to install</li>
+<li>Additional settings</li>
+</ol>
+<p>After providing the necessary information, TermiPy will create a <code>.devcontainer/devcontainer.json</code> file in your current directory.</p>
+</section>
+</section>
 <section id="best-practices" class="level2">
 <h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
 <ol type="1">
@@ -294,6 +323,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Create separate environments for different projects to avoid package conflicts.</li>
 <li>Regularly update your environments to ensure you’re using the latest package versions.</li>
 <li>Document the packages and versions used in your project for reproducibility.</li>
+<li>When creating a DevContainer, consider the specific needs of your project and include only the necessary features and extensions.</li>
 </ol>
 </section>
 <section id="troubleshooting" class="level2">
@@ -304,6 +334,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>You have the necessary permissions to create directories and install packages.</li>
 <li>Your PATH environment variable is correctly set.</li>
 <li>For R environments, ensure that R is properly installed and accessible from the command line.</li>
+<li>For DevContainer issues, ensure that Docker is properly installed and running on your system.</li>
+<li>Check that the specified image URL or custom image location is correct and accessible.</li>
 </ol>
 
 

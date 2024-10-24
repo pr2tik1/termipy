@@ -4,6 +4,8 @@ TermiPy is a lightweight and extensible command-line shell designed for users wh
 [![PyPI version](https://badge.fury.io/py/termipy.svg)](https://badge.fury.io/py/termipy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Versions](https://img.shields.io/pypi/pyversions/termipy.svg)](https://pypi.org/project/termipy/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue.svg)](https://github.com/yourusername/termipy)
+[![Documentation Status](https://readthedocs.org/projects/termipy/badge/?version=latest)](https://termipy.readthedocs.io/en/latest/?badge=latest)
 <br>
 <br>
 
@@ -24,6 +26,7 @@ TermiPy aims to achieve the following objectives:
 1. **Simplicity**: Provide essential shell functionality in a streamlined way.
 2. **Extensibility**: Offer a flexible base for customization and expansion.
 3. **Cross-Platform Compatibility**: Ensure functionality across major operating systems.
+4. **User-Friendly**: Create an intuitive interface for both beginners and experienced users.
 
 ## Key Features
 
@@ -52,10 +55,20 @@ TermiPy offers a range of features to enhance your command-line experience:
    - Run on Linux, macOS, and Windows seamlessly
 
 ## Installation & Usage
-Install via pip and run using Python 3 to get started quickly. Visit Getting Started for more details.
+Install the latest stable version of TermiPy via pip:
+
+```bash
+pip install termipy==0.2.7
+termipy
+```
+
+For detailed instructions, including how to install specific versions or contribute to the project, please visit our [Getting Started](getting-started.qmd) guide.
+
+## Documentation
+For full documentation, including API references and tutorials, visit our [Read the Docs](https://termipy.readthedocs.io/) page.
 
 ## Contributions
-We welcome contributions! Check out our issues page to get involved.
+We welcome contributions from the community! Whether it's bug reports, feature requests, or code contributions, please check out our [GitHub repository](https://github.com/pr2tik1/termipy) and read our [Contributing Guidelines](../CONTRIBUTING.md) to get involved.
 
 ## License
-TermiPy is licensed under the MIT License.
+TermiPy is open-source software licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

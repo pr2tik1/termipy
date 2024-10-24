@@ -5,11 +5,17 @@ TermiPy provides a range of commands for file and directory operations. This gui
 
 ## Listing Files and Directories
 
-### getwd or ls
-List contents of the current directory
+### getwd
+Get working directory.
 
 ```bash
 @termipy >> getwd
+```
+
+### ls
+List contents of the current directory.
+
+```bash
 @termipy >> ls
 ```
 
@@ -20,6 +26,12 @@ Show directory structure
 ```bash
 @termipy >> tree
 @termipy >> tree /path/to/directory
+```
+
+or restricting the depth of the tree
+
+```bash
+@termipy >> tree -l 2
 ```
 
 ## Navigating Directories
@@ -110,14 +122,14 @@ Show file details
 1. Use tab completion to quickly navigate directories and input file names.
 2. When dealing with files or directories with spaces in their names, use quotes:
 
-```bash
-@termipy >> setwd "My Documents"
-```
+    ```bash
+    @termipy >> setwd "My Documents"
+    ```
 
 
 3. Be cautious when using the `delete` command, as it permanently removes files and directories.
 4. Use the `tree` command with a depth parameter to limit the levels shown:
 
-```bash
-@termipy >> tree -L 2
-```
+    ```bash
+    @termipy >> tree -l 2
+    ```

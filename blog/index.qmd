@@ -4,7 +4,7 @@ TermiPy is a lightweight and extensible command-line shell designed for users wh
 [![PyPI version](https://badge.fury.io/py/termipy.svg)](https://badge.fury.io/py/termipy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Versions](https://img.shields.io/pypi/pyversions/termipy.svg)](https://pypi.org/project/termipy/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue.svg)](https://github.com/yourusername/termipy)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue.svg)](https://github.com/pr2tik1/termipy)
 [![Documentation Status](https://readthedocs.org/projects/termipy/badge/?version=latest)](https://termipy.readthedocs.io/en/latest/?badge=latest)
 <br>
 <br>

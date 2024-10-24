@@ -10,6 +10,12 @@ To start monitoring system resources, use the following command:
 @termipy >> resource
 ```
 
+or 
+
+```bash
+@termipy >> stats
+```
+
 ## Understanding the Output
 
 The resource monitoring feature provides information on three key areas:

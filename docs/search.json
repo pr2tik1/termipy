@@ -134,7 +134,7 @@
     "href": "file-handling.html#listing-files-and-directories",
     "title": "File Handling",
     "section": "",
-    "text": "getwd or ls\nList contents of the current directory\n@termipy &gt;&gt; getwd\n@termipy &gt;&gt; ls\n\n\ntree [directory]\nShow directory structure\n@termipy &gt;&gt; tree\n@termipy &gt;&gt; tree /path/to/directory",
+    "text": "getwd\nGet working directory.\n@termipy &gt;&gt; getwd\n\n\nls\nList contents of the current directory.\n@termipy &gt;&gt; ls\n\n\ntree [directory]\nShow directory structure\n@termipy &gt;&gt; tree\n@termipy &gt;&gt; tree /path/to/directory\nor restricting the depth of the tree\n@termipy &gt;&gt; tree -l 2",
     "crumbs": [
       "File Handling"
     ]
@@ -224,7 +224,7 @@
     "href": "file-handling.html#tips-for-file-handling",
     "title": "File Handling",
     "section": "Tips for File Handling",
-    "text": "Tips for File Handling\n\nUse tab completion to quickly navigate directories and input file names.\nWhen dealing with files or directories with spaces in their names, use quotes:\n\n@termipy &gt;&gt; setwd \"My Documents\"\n\nBe cautious when using the delete command, as it permanently removes files and directories.\nUse the tree command with a depth parameter to limit the levels shown:\n\n@termipy &gt;&gt; tree -L 2",
+    "text": "Tips for File Handling\n\nUse tab completion to quickly navigate directories and input file names.\nWhen dealing with files or directories with spaces in their names, use quotes:\n@termipy &gt;&gt; setwd \"My Documents\"\nBe cautious when using the delete command, as it permanently removes files and directories.\nUse the tree command with a depth parameter to limit the levels shown:\n@termipy &gt;&gt; tree -l 2",
     "crumbs": [
       "File Handling"
     ]
@@ -304,7 +304,7 @@
     "href": "resource-stats.html",
     "title": "Resource Monitoring",
     "section": "",
-    "text": "Using the Resource Monitoring Command\nTo start monitoring system resources, use the following command:",
+    "text": "Using the Resource Monitoring Command\nTo start monitoring system resources, use the following command:\nor",
     "crumbs": [
       "Resource Monitoring"
     ]
@@ -314,7 +314,7 @@
     "href": "resource-stats.html#using-the-resource-monitoring-command",
     "title": "Resource Monitoring",
     "section": "",
-    "text": "@termipy &gt;&gt; resource",
+    "text": "@termipy &gt;&gt; resource\n\n@termipy &gt;&gt; stats",
     "crumbs": [
       "Resource Monitoring"
     ]

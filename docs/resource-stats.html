@@ -226,6 +226,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="using-the-resource-monitoring-command">Using the Resource Monitoring Command</h2>
 <p>To start monitoring system resources, use the following command:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> resource</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="understanding-the-output" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-output">Understanding the Output</h2>
@@ -251,21 +253,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Network data sent and received</li>
 </ul>
 <p>Example output:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> System and Hardware Information                                                │</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> OS: Windows                                                                    │</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU: 4 cores <span class="er">(</span><span class="ex">8</span> threads<span class="kw">)</span>                                                       <span class="ex">│</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Total RAM: 16.00 GB                                                            │</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Uptime: 2d 3h 45m 30s                                                          │</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU Usage: 5.0%                                                                │</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Memory Usage: 60.0%                                                            │</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Available Memory: 6.40 GB                                                      │</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Disk Usage: 75.0%                                                              │</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Free Disk Space: 250.00 GB                                                     │</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Sent: 100.50 MB                                                        │</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Recv: 1024.75 MB                                                       │</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> System and Hardware Information                                                │</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> OS: Windows                                                                    │</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU: 4 cores <span class="er">(</span><span class="ex">8</span> threads<span class="kw">)</span>                                                       <span class="ex">│</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Total RAM: 16.00 GB                                                            │</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Uptime: 2d 3h 45m 30s                                                          │</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU Usage: 5.0%                                                                │</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Memory Usage: 60.0%                                                            │</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Available Memory: 6.40 GB                                                      │</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Disk Usage: 75.0%                                                              │</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Free Disk Space: 250.00 GB                                                     │</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Sent: 100.50 MB                                                        │</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Network Recv: 1024.75 MB                                                       │</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="temperature-and-battery" class="level3">
 <h3 class="anchored" data-anchor-id="temperature-and-battery">Temperature and Battery</h3>
@@ -277,14 +279,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Estimated battery time left (if applicable)</li>
 </ul>
 <p>Example output:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Temperature and Battery                                                        │</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU Temp <span class="er">(</span><span class="ex">coretemp</span><span class="kw">)</span><span class="bu">:</span> 45°C                                                      │</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Battery: 80.0%                                                                 │</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Power Plugged: No                                                              │</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Time Left: 3h 30m                                                              │</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Temperature and Battery                                                        │</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> CPU Temp <span class="er">(</span><span class="ex">coretemp</span><span class="kw">)</span><span class="bu">:</span> 45°C                                                      │</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Battery: 80.0%                                                                 │</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Power Plugged: No                                                              │</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Time Left: 3h 30m                                                              │</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="process-and-gpu-usage" class="level3">
 <h3 class="anchored" data-anchor-id="process-and-gpu-usage">Process and GPU Usage</h3>
@@ -296,26 +298,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>GPU Name, Usage, Memory, and Temperature (if applicable)</li>
 </ul>
 <p>Example output:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process and GPU Usage                                                          │</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 1: PID: 1234   Name: chrome.exe       CPU: 10.5%                       │</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 2: PID: 5678   Name: python.exe       CPU: 5.2%                        │</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 3: PID: 9101   Name: explorer.exe     CPU: 2.1%                        │</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 4: PID: 1122   Name: vscode.exe       CPU: 1.8%                        │</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 5: PID: 3344   Name: spotify.exe      CPU: 1.5%                        │</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0: NVIDIA GeForce RTX 3080                                                 │</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Usage: 30.0%                                                             │</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Memory: 40.0%                                                            │</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Temperature: 65°C                                                        │</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">┌────────────────────────────────────────────────────────────────────────────────┐</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process and GPU Usage                                                          │</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├────────────────────────────────────────────────────────────────────────────────┤</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 1: PID: 1234   Name: chrome.exe       CPU: 10.5%                       │</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 2: PID: 5678   Name: python.exe       CPU: 5.2%                        │</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 3: PID: 9101   Name: explorer.exe     CPU: 2.1%                        │</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 4: PID: 1122   Name: vscode.exe       CPU: 1.8%                        │</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> Process 5: PID: 3344   Name: spotify.exe      CPU: 1.5%                        │</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0: NVIDIA GeForce RTX 3080                                                 │</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Usage: 30.0%                                                             │</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Memory: 40.0%                                                            │</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span> GPU 0 Temperature: 65°C                                                        │</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="ex">└────────────────────────────────────────────────────────────────────────────────┘</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="continuous-monitoring" class="level2">
 <h2 class="anchored" data-anchor-id="continuous-monitoring">Continuous Monitoring</h2>
 <p>The resource monitoring feature updates every 2 seconds, providing a near real-time view of your system’s resource usage. The display is refreshed automatically, clearing the screen and showing the latest information.</p>
 <p>To stop the monitoring, press <code>Ctrl+C</code>. You’ll see a message confirming that the monitoring has stopped:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopped</span> monitoring resource usage.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Stopped</span> monitoring resource usage.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="color-coding" class="level2">
 <h2 class="anchored" data-anchor-id="color-coding">Color Coding</h2>

@@ -6,7 +6,7 @@ from .file_commands import (TreeCommand, CreateCommand, SearchCommand,
 from .system_commands import (EchoCommand, GetWdCommand, SetWdCommand,
                               TypeOfCommand, ClearCommand, DiskUsageCommand, 
                               ExitCommand, LsCommand)
-from .environment_commands import SetPyEnvCommand, SetREnvCommand
+from .environment_commands import SetPyEnvCommand, SetREnvCommand, CreateDevContainerCommand
 from .utility_commands import HelpCommand, CommandsCommand
 
 __version__ = "0.2.6"
@@ -15,4 +15,4 @@ __all__ = ['Command', 'ResourceUsageCommand', 'TreeCommand', 'CreateCommand',
            'EchoCommand', 'GetWdCommand', 'SetWdCommand', 'TypeOfCommand',
            'ClearCommand', 'DiskUsageCommand', 'ExitCommand', 'LsCommand',
            'SetPyEnvCommand', 'SetREnvCommand', 'HelpCommand', 'AboutCommand', 
-           'CommandsCommand']
+           'CommandsCommand', 'CreateDevContainerCommand']

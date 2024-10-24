@@ -9,15 +9,11 @@ WELCOME_MESSAGE = """
                                                         
 Welcome to TermiPy!
 
-TermiPy is a versatile command-line interface that combines the power of Python
-with the flexibility of a shell environment. It provides a range of built-in
-commands for file operations, system management, and more.
-
 Type 'help' for a list of available commands and their usage.
 
 Author: Pratik Kumar
 Version: 0.2.6
-Date: 2024-10-12
+Date: 2024-10-24
 Contact: pr2tik1@gmail.com
 """
 

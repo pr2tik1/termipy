@@ -6,6 +6,7 @@ This module contains commands that deal with system resource usage.
 
 import psutil
 import shutil
+import GPUtil
 import time
 from typing import List
 from termipy.base_command import Command
@@ -156,6 +157,83 @@ class ResourceUsageCommand(Command):
             self.print_in_block("Process Usage", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
 
 
+    def gpu_usage(self):
+        """Displays GPU usage information."""
+        try:
+            gpus = GPUtil.getGPUs()
+            if gpus:
+                title = "GPU Usage"
+                content = []
+                for i, gpu in enumerate(gpus):
+                    content.extend([
+                        f"GPU {i}: {gpu.name}",
+                        f"GPU Usage: {self.color_percentage(gpu.load * 100)}",
+                        f"GPU Memory: {self.color_percentage(gpu.memoryUtil * 100)}",
+                        f"GPU Temperature: {Fore.YELLOW}{gpu.temperature}°C{Style.RESET_ALL}"
+                    ])
+                self.print_in_block(title, content)
+            else:
+                self.print_in_block("GPU Usage", ["No GPU detected"])
+        except Exception as e:
+            self.print_in_block("GPU Usage", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
+
+    def temperature(self):
+        """Displays CPU temperature if available."""
+        try:
+            if hasattr(psutil, "sensors_temperatures"):
+                temps = psutil.sensors_temperatures()
+                if temps:
+                    title = "CPU Temperature"
+                    content = []
+                    for name, entries in temps.items():
+                        for entry in entries:
+                            content.append(f"{name}: {Fore.YELLOW}{entry.current}°C{Style.RESET_ALL}")
+                    self.print_in_block(title, content)
+                else:
+                    self.print_in_block("CPU Temperature", ["Temperature information not available"])
+            else:
+                self.print_in_block("CPU Temperature", ["Temperature monitoring not supported on this system"])
+        except Exception as e:
+            self.print_in_block("CPU Temperature", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
+
+    def battery_info(self):
+        """Displays battery information for laptops."""
+        try:
+            battery = psutil.sensors_battery()
+            if battery:
+                title = "Battery Information"
+                content = [
+                    f"Battery Percentage: {self.color_percentage(battery.percent)}",
+                    f"Power Plugged: {'Yes' if battery.power_plugged else 'No'}",
+                    f"Time Left: {Fore.CYAN}{battery.secsleft // 3600}h {(battery.secsleft % 3600) // 60}m{Style.RESET_ALL}"
+                ]
+                self.print_in_block(title, content)
+            else:
+                self.print_in_block("Battery Information", ["No battery detected"])
+        except Exception as e:
+            self.print_in_block("Battery Information", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
+
+    def system_info(self):
+        """Displays general system information."""
+        try:
+            title = "System Information"
+            content = [
+                f"OS: {platform.system()} {platform.release()}",
+                f"Python Version: {platform.python_version()}",
+                f"Uptime: {Fore.CYAN}{self.get_uptime()}{Style.RESET_ALL}"
+            ]
+            self.print_in_block(title, content)
+        except Exception as e:
+            self.print_in_block("System Information", [f"{Fore.RED}Error: {str(e)}{Style.RESET_ALL}"])
+
+    def get_uptime(self):
+        """Returns the system uptime as a formatted string."""
+        uptime = int(time.time() - psutil.boot_time())
+        days, remainder = divmod(uptime, 86400)
+        hours, remainder = divmod(remainder, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        return f"{days}d {hours}h {minutes}m {seconds}s"
+
     def execute(self, args: List[str]) -> bool:
         if self.handle_help_flag(args):
             return True
@@ -163,11 +241,15 @@ class ResourceUsageCommand(Command):
         try:
             while True:
                 self.output = []
+                self.system_info()
                 self.cpu_usage()
                 self.memory_usage()
                 self.disk_usage()
                 self.network_usage()
                 self.process_usage()
+                self.gpu_usage()
+                self.temperature()
+                self.battery_info()
                 self.output.append(f"{Fore.YELLOW}Press Ctrl+C to STOP monitoring.{Style.RESET_ALL}")
                 print("\033[2J\033[H", end="")
                 print("\n".join(self.output))

@@ -188,7 +188,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#listing-files-and-directories" id="toc-listing-files-and-directories" class="nav-link active" data-scroll-target="#listing-files-and-directories">Listing Files and Directories</a>
   <ul class="collapse">
-  <li><a href="#getwd-or-ls" id="toc-getwd-or-ls" class="nav-link" data-scroll-target="#getwd-or-ls">getwd or ls</a></li>
+  <li><a href="#getwd" id="toc-getwd" class="nav-link" data-scroll-target="#getwd">getwd</a></li>
+  <li><a href="#ls" id="toc-ls" class="nav-link" data-scroll-target="#ls">ls</a></li>
   <li><a href="#tree-directory" id="toc-tree-directory" class="nav-link" data-scroll-target="#tree-directory">tree [directory]</a></li>
   </ul></li>
   <li><a href="#navigating-directories" id="toc-navigating-directories" class="nav-link" data-scroll-target="#navigating-directories">Navigating Directories</a>
@@ -252,17 +253,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>TermiPy provides a range of commands for file and directory operations. This guide covers the most commonly used file handling commands.</p>
 <section id="listing-files-and-directories" class="level2">
 <h2 class="anchored" data-anchor-id="listing-files-and-directories">Listing Files and Directories</h2>
-<section id="getwd-or-ls" class="level3">
-<h3 class="anchored" data-anchor-id="getwd-or-ls">getwd or ls</h3>
-<p>List contents of the current directory</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> getwd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="getwd" class="level3">
+<h3 class="anchored" data-anchor-id="getwd">getwd</h3>
+<p>Get working directory.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> getwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ls" class="level3">
+<h3 class="anchored" data-anchor-id="ls">ls</h3>
+<p>List contents of the current directory.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="tree-directory" class="level3">
 <h3 class="anchored" data-anchor-id="tree-directory">tree [directory]</h3>
 <p>Show directory structure</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> tree</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> tree /path/to/directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> tree</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> tree /path/to/directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or restricting the depth of the tree</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> tree <span class="at">-l</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="navigating-directories" class="level2">
@@ -270,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setwd-directory" class="level3">
 <h3 class="anchored" data-anchor-id="setwd-directory">setwd <code>&lt;directory&gt;</code></h3>
 <p>Change the current working directory</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> setwd /path/to/directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> setwd /path/to/directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="creating-files-and-directories" class="level2">
@@ -278,8 +285,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="create-path" class="level3">
 <h3 class="anchored" data-anchor-id="create-path">create <code>&lt;path&gt;</code></h3>
 <p>Create a new file or directory</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> create new_file.txt</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> create new_directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> create new_file.txt</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> create new_directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="deleting-files-and-directories" class="level2">
@@ -287,8 +294,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="delete-path" class="level3">
 <h3 class="anchored" data-anchor-id="delete-path">delete <code>&lt;path&gt;</code></h3>
 <p>Delete a file or directory</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> delete old_file.txt</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> delete old_directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> delete old_file.txt</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> delete old_directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="renaming-files-and-directories" class="level2">
@@ -296,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="rename-old-new" class="level3">
 <h3 class="anchored" data-anchor-id="rename-old-new">rename <code>&lt;old&gt;</code> <code>&lt;new&gt;</code></h3>
 <p>Rename a file or directory</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> rename old_name.txt new_name.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> rename old_name.txt new_name.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="searching-for-files" class="level2">
@@ -304,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="search-filename" class="level3">
 <h3 class="anchored" data-anchor-id="search-filename">search <code>&lt;filename&gt;</code></h3>
 <p>Search for a file in the current directory and subdirectories</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> search important_doc.pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> search important_doc.pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="file-permissions" class="level2">
@@ -312,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="permissions-file" class="level3">
 <h3 class="anchored" data-anchor-id="permissions-file">permissions <code>&lt;file&gt;</code></h3>
 <p>Show file permissions</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> permissions myfile.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> permissions myfile.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="disk-usage" class="level2">
@@ -320,8 +327,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="diskusage-path" class="level3">
 <h3 class="anchored" data-anchor-id="diskusage-path">diskusage [path]</h3>
 <p>Show disk usage for a specific path or the current directory</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> diskusage</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> diskusage /home/user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> diskusage</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> diskusage /home/user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="file-details" class="level2">
@@ -329,21 +336,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="about-file" class="level3">
 <h3 class="anchored" data-anchor-id="about-file">about <code>&lt;file&gt;</code></h3>
 <p>Show file details</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> about myfile.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> about myfile.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="tips-for-file-handling" class="level2">
 <h2 class="anchored" data-anchor-id="tips-for-file-handling">Tips for File Handling</h2>
 <ol type="1">
-<li>Use tab completion to quickly navigate directories and input file names.</li>
-<li>When dealing with files or directories with spaces in their names, use quotes:</li>
+<li><p>Use tab completion to quickly navigate directories and input file names.</p></li>
+<li><p>When dealing with files or directories with spaces in their names, use quotes:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> setwd <span class="st">"My Documents"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Be cautious when using the <code>delete</code> command, as it permanently removes files and directories.</p></li>
+<li><p>Use the <code>tree</code> command with a depth parameter to limit the levels shown:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> tree <span class="at">-l</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> setwd <span class="st">"My Documents"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="3" type="1">
-<li>Be cautious when using the <code>delete</code> command, as it permanently removes files and directories.</li>
-<li>Use the <code>tree</code> command with a depth parameter to limit the levels shown:</li>
-</ol>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@termipy</span> <span class="op">&gt;&gt;</span> tree <span class="at">-L</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
